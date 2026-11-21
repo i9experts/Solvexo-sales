@@ -11,6 +11,7 @@ Sales and marketing material for **Solvexo**, a connected commerce platform for 
 | [`brand/`](brand/) | Logos (PNG with transparent background and JPG on white), source PDF, launch video, colours and logo rules |
 | [`marketing/`](marketing/) | Finished creative such as flyers and posters |
 | [`product/`](product/) | What Solvexo does, who it is for, and the **approved claims list** (check it before you say anything to a prospect) |
+| [`sales/plan/`](sales/plan/) | 30-day sales plan: goal, actions, budget, weekly targets |
 | [`sales/pitch/`](sales/pitch/) | Elevator pitch and one-liners in English and Urdu |
 | [`sales/playbook/`](sales/playbook/) | Sales process, lead qualification, objection handling |
 | [`sales/outreach/`](sales/outreach/) | WhatsApp and follow-up message templates in English and Urdu |
