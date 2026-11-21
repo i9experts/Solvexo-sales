@@ -6,19 +6,25 @@ Solvexo puts a seller's online store, shop-counter POS, orders, stock and analyt
 
 ## What a seller gets
 
+Checked against [solvexo.store](https://www.solvexo.store) on 21 Nov 2026.
+
 | Part | What it does | Status |
 |---|---|---|
-| **Online store** | Seller's own storefront on a subdomain (e.g. `yourstore.solvexo.store`) | Confirm live |
-| **Seller dashboard** | Products, orders, customers, settings, with an onboarding wizard | Confirm live |
-| **POS (desktop register)** | Sale, orders, products, shift summary, customer lookup, discounts/coupons, cash change, split payments, custom item price, hold sale, receipts | Confirm live |
-| **POS mobile app** | Sale, payment, receipt, orders, products, settings on a phone | Confirm live |
-| **Seller mobile app** | Dashboard, orders, add products, analytics, messages, settings | Confirm live |
-| **Marketplace** | Seller's products also appear on the Solvexo marketplace app alongside other stores | Confirm live |
-| **Digital downloads** | Sell digital products and educational resources | Confirm live |
-| **AI analytics** | Sales insights and growth analytics | Confirm what exactly it shows |
-| **Real-time inventory sync** | One stock count across store, POS and marketplace | Shown on the website |
+| **Store builder** | Drag-and-drop storefront editor, themes, sections, header/footer, live desktop and mobile preview, own subdomain (`yourstore.solvexo.store`) | On website |
+| **POS (in the browser)** | Search → cart → payment → receipt; PIN login for staff; register session tracking; works without an online store | On website |
+| **Inventory** | One stock count shared by the online store and POS, in real time; multiple shop/warehouse locations (by plan) | On website |
+| **Orders & customers** | Every order (online or in-store) and every customer in one place | On website |
+| **Analytics** | Revenue, orders, customer trends; per store or across stores; PDF and CSV export | On website |
+| **Loyalty & rewards** | Points, tiers and perks for buyers (Grow plan and up) | On website |
+| **Marketing** | Discount codes, gift cards, email campaigns, abandoned-cart recovery | On pricing page |
+| **Digital & wholesale** | Digital downloads, memberships, licence keys, courses, B2B wholesale prices (Grow and up) | On pricing page |
+| **Selling abroad** | Multiple selling currencies (3–unlimited by plan); 22 storefront languages; site in English and Arabic | On pricing page |
+| **AI** | Suggests a product's page title and description; seller approves before anything changes | On About page |
+| **POS mobile app / seller mobile app** | Native apps | **Roadmap** per About page. Confirm before promising. |
+| **Custom domain** | Seller's own .com | Listed on plans, but **roadmap** per About page. Confirm. |
+| **Marketplace** | Seller's products shown to buyers on Solvexo Store | Confirm current status |
 
-Mark each row **Live** once management confirms it. Until then, demo only what you have seen working yourself.
+Demo only what you have seen working yourself on a demo account.
 
 ## Who we sell to
 
@@ -33,11 +39,12 @@ Mark each row **Live** once management confirms it. Until then, demo only what y
 
 ## How a seller starts
 
-1. Go to [solvexo.store](https://solvexo.store) or scan the QR code on the flyer and tap **Start Selling Free**.
-2. Sign up and follow the onboarding wizard.
-3. Add products, then share the store link.
+1. Go to [solvexo.store](https://www.solvexo.store) or scan the QR code on the flyer and tap **Start Selling**. Sign up with email (verified by a one-time code) or with Google.
+2. Pick a plan. The first 7 days are free with no card needed.
+3. Follow onboarding and add a payment method. The store is **live straight away**, with no approval queue.
+4. Add products, then share the store link.
 
-**Confirm:** how long setup really takes (the flyer says "3-minute setup, account ready within 24 hours"), and whether any approval step exists.
+Prices and fees: see [`../pricing/`](../pricing/).
 
 ## Team
 

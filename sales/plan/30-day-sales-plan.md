@@ -30,6 +30,14 @@ Solvexo has **no proof yet**: no live sellers to show and no reviews. Shop owner
 - English: *Your shop counter and your online store, one app, one stock count.*
 - Urdu: *دکان کی سیل اور آن لائن آرڈر — ایک ہی ایپ، ایک ہی اسٹاک۔*
 
+## The offer (from the website, 21 Nov 2026)
+
+**7 days free, no card → US$1/month for 3 months → from US$6/month. 0% commission on cash on delivery and shop sales.**
+
+This is the hook for every visit, DM and ad. In practice it means a seller can try Solvexo for almost nothing until about March. Don't call it "limited time" until the launch offer has a real end date.
+
+- Urdu: *7 دن بالکل مفت، کارڈ کی ضرورت نہیں۔ پھر تین مہینے صرف 1 ڈالر مہینہ۔ COD اور دکان کی سیل پر کوئی کمیشن نہیں۔*
+
 ## Do these 5 things
 
 | # | Action | Owner | Cost (PKR, estimate) | Shows it worked |
@@ -66,13 +74,15 @@ From `trackers/Solvexo_Seller_Pipeline_Tracker.xlsx`:
 
 ## Fix in week 1 before selling hard
 
-These block the field team from answering basic questions:
+Pricing is now on the website (see `pricing/`). These still block the field team:
 
-1. **Pricing and "free":** what exactly is free, and what do sellers pay later? Add it to `pricing/` with a date.
-2. **Payments and payouts:** which methods work for Pakistani sellers (e.g. bank transfer, JazzCash, Easypaisa, COD) and for Gulf sellers? When does the seller get the money?
-3. **Setup claim:** is it "3-minute setup" or "account ready within 24 hours"? Pick one for the flyer and the pitch.
-4. **Founding Seller benefits:** only offer what the team can really deliver (e.g. free product upload help).
-5. **Support:** one WhatsApp number for seller support, and who answers it.
+1. **🔴 How Karachi shops pay the subscription.** The site bills in US$ by card through Stripe. Many shop owners don't have a card that works for international online payments. **This can stop the Karachi target cold.** Before week 1 ends, test sign-up and the first payment with 3 real shop owners' cards. If it fails, management needs a local option (PKR, JazzCash/Easypaisa, bank transfer) or the rep collects and pays on the seller's behalf. Either needs management approval.
+2. **Card payouts for Pakistani sellers:** can they take card payments through Solvexo Payments and get paid? Until confirmed, pitch cash on delivery and bank transfer, both at 0%.
+3. **Fix the flyer.** Change "Account ready within 24 hours" to "Live straight away" (the website says there's no approval queue). Change "real AI analytics" to "real analytics": the site says AI only suggests product titles and descriptions.
+4. **Mobile POS:** the For Sellers page promises a mobile POS, but the About page says the native POS app is on the roadmap. Demo POS in the phone browser only.
+5. **Website clean-up before ads drive traffic:** the FAQ is written for buyers and has a typo ("How i do Reset my Password?"). It also says sellers are "verified", which contradicts "no approval queue". The For Sellers stats bar shows "0+ Active Sellers / $0+ GMV" while loading, which looks bad on slow phones. The sample dashboard figures should keep their "Sample data" labels.
+6. **Support:** the site only offers email (reply within 24 hours). For Karachi shops, add one WhatsApp support number and name who answers it.
+7. **Founding Seller benefits:** only offer what the team can really deliver (e.g. free product upload help).
 
 ## Stop / don't do
 
@@ -82,6 +92,6 @@ These block the field team from answering basic questions:
 
 ## Open questions
 
-- Is there a commission or transaction fee on orders? (This affects the pitch to price-sensitive shops.)
-- Which Gulf country first, UAE or KSA? It decides currency, payments and ad targeting.
+- When does the launch offer (40% off, US$1 × 3 months) end?
+- Which Gulf country first, UAE or KSA? The Gulf may actually be the easier market: sellers there pay by card in US$ without trouble, Stripe is available in the UAE (confirm KSA), and the site already has Arabic. If the Karachi card problem (fix #1) can't be solved quickly, move more effort to the Gulf test.
 - Can sales reps get a demo account each?

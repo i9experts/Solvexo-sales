@@ -29,12 +29,12 @@ Sales and marketing material for **Solvexo**, a connected commerce platform for 
 
 ## Open items to confirm with management
 
-These gaps are flagged throughout the repo as **Confirm**:
+Pricing, fees and the launch offer are now published on [solvexo.store/pricing](https://www.solvexo.store/pricing) and copied into [`pricing/`](pricing/). Still open:
 
-- Pricing plans: is there a free plan ("Start Selling Free"), subscription vs commission, transaction fees
-- Target markets and currency (Pakistan first? Gulf?)
-- Payment and payout methods available to Pakistani sellers
-- Which modules are live today vs. coming soon
-- Setup promise: the flyer says both "3-minute setup / account ready within 24 hours" and "self-serve, no approval queue". Which is accurate?
-- Support channels and hours (WhatsApp number, email)
+- **How Pakistani shops pay the US$ subscription** without an international card (PKR / JazzCash / Easypaisa / bank transfer?)
+- Card payments and payouts for Pakistani sellers through Solvexo Payments
+- Launch offer end date
+- Mobile POS app and custom domains: the website lists them, but the About page says both are on the roadmap
+- Flyer fixes: "account ready within 24 hours" → "live straight away"; "real AI analytics" → "real analytics"
+- WhatsApp support number and who answers it
 - Brand fonts (not on record)
