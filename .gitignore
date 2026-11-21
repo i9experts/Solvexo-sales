@@ -1,0 +1,11 @@
+# Never commit real lead or customer data. Keep filled-in trackers in your own drive.
+trackers/*_live*.xlsx
+trackers/*_filled*.xlsx
+leads/
+exports/
+*.csv
+
+# Office lock files and OS clutter
+~$*
+.DS_Store
+Thumbs.db
