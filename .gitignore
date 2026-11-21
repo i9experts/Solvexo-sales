@@ -9,3 +9,6 @@ exports/
 ~$*
 .DS_Store
 Thumbs.db
+
+# Generated download copies (rebuilt from the Markdown files)
+downloads/
