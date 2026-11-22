@@ -7,3 +7,5 @@
 Add new creative in a subfolder by type (`flyers/`, `social/`, `video/`, `print/`), named `solvexo-<type>-<campaign>.<ext>`.
 
 **Note:** the app screenshot on the flyer shows sample figures (sellers, sales, rating). Don't quote these as Solvexo results.
+
+**Print plan:** [`print/print-materials-plan.md`](print/print-materials-plan.md) lists every printed marketing and brand item, with size, quantity, content and priority.
