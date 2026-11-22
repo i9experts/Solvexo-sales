@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Solvexo Leave-behind Card</title>
+<style>
+@font-face{font-family:Poppins;font-weight:400;src:url(../tent-card/fonts/poppins-latin-400-normal.woff2)}
+@font-face{font-family:Poppins;font-weight:600;src:url(../tent-card/fonts/poppins-latin-600-normal.woff2)}
+@font-face{font-family:Poppins;font-weight:700;src:url(../tent-card/fonts/poppins-latin-700-normal.woff2)}
+@font-face{font-family:Poppins;font-weight:800;src:url(../tent-card/fonts/poppins-latin-800-normal.woff2)}
+@font-face{font-family:Nastaliq;font-weight:400;src:url(../tent-card/fonts/noto-nastaliq-urdu-arabic-400-normal.woff2)}
+@font-face{font-family:Nastaliq;font-weight:700;src:url(../tent-card/fonts/noto-nastaliq-urdu-arabic-700-normal.woff2)}
+:root{--t:#D97757;--c:#F59373;--r:#B85C3E;--ink:#1F1A17;--paper:#FFFDFB;--sand:#F7ECE5;--mute:#5E534D;--line:#EAD9CF}
+/* 3.5 x 2 in (88.9 x 50.8 mm) + 3 mm bleed = 94.9 x 56.8 mm. Safe area: 4 mm inside trim = 7 mm from sheet edge. */
+@page{size:94.9mm 56.8mm;margin:0}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Poppins,sans-serif;color:var(--ink);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.card{width:94.9mm;height:56.8mm;position:relative;overflow:hidden;page-break-after:always}
+.ur{font-family:Nastaliq,serif;direction:rtl;unicode-bidi:isolate}
+/* FRONT */
+.front{background:var(--paper)}
+.front .deco{position:absolute;right:-14mm;top:-16mm;width:40mm;height:40mm;border-radius:9mm;background:var(--c);opacity:.3}
+.front .logo{position:absolute;left:7mm;top:7mm;height:5.6mm}
+.front .h{position:absolute;left:7mm;top:15.5mm;width:50mm;font-weight:800;font-size:14.5pt;line-height:1.02;letter-spacing:-.015em}
+.front .h span{color:var(--t);display:block}
+.front .s{position:absolute;left:7mm;top:30.5mm;width:50mm;font-size:5.6pt;line-height:1.35;color:var(--mute)}
+.front .qr{position:absolute;right:7mm;top:9.5mm;width:25mm;background:#fff;border-radius:2mm;padding:1.6mm;box-shadow:0 0 0 .35mm var(--line);text-align:center}
+.front .qr img{width:21.8mm;height:21.8mm;display:block}
+.front .qr span{display:block;font-weight:700;font-size:4.6pt;letter-spacing:.12em;margin-top:.8mm;color:var(--r)}
+.front .bar{position:absolute;left:0;right:0;bottom:0;height:13.5mm;background:var(--t)}
+.front .bar .in{position:absolute;left:7mm;right:7mm;top:3.4mm;display:flex;justify-content:space-between;align-items:center}
+.front .bar b{font-weight:800;font-size:9pt;color:#fff}
+.front .bar span{font-weight:600;font-size:5.4pt;color:var(--ink)}
+/* BACK */
+.back{background:var(--sand)}
+.back .top{position:absolute;left:7mm;right:7mm;top:5.6mm;text-align:right}
+.back .top .t{font-weight:700;font-size:9.2pt;line-height:1.9}
+.back .top p{font-size:6.6pt;line-height:1.9}
+.back .rep{position:absolute;left:7mm;right:7mm;top:28mm}
+.back .rep .k{font-weight:600;font-size:5.6pt;color:var(--r);letter-spacing:.08em}
+.back .rep .l{display:flex;gap:1.6mm;align-items:flex-end;font-size:5.6pt;color:var(--mute);margin-top:2.6mm}
+.back .rep .l i{flex:1;border-bottom:.3mm solid #B9A69D;height:2.6mm}
+.back .foot{position:absolute;left:7mm;right:7mm;bottom:5mm;display:flex;justify-content:space-between;align-items:center;font-size:5pt;color:var(--mute)}
+.back .foot .pw{display:flex;align-items:center;gap:1.2mm}
+.back .foot img{height:3.2mm}
+.back .foot b{color:var(--ink)}
+</style></head>
+<body>
+
+<div class="card front">
+  <div class="deco"></div>
+  <img class="logo" src="logo.png" alt="Solvexo">
+  <p class="h">7 days free.<span>No card needed.</span></p>
+  <p class="s">Your shop counter and online store in one app, with one stock count.</p>
+  <div class="qr"><img src="qr.svg" alt="QR code to solvexo.store"><span>SCAN TO START</span></div>
+  <div class="bar"><div class="in"><b>solvexo.store</b><span>0% commission on COD &amp; shop sales</span></div></div>
+</div>
+
+<div class="card back">
+  <div class="top ur">
+    <p class="t">7 دن بالکل مفت — کارڈ کی ضرورت نہیں</p>
+    <p>دکان کی سیل اور آن لائن آرڈر، ایک ہی ایپ میں۔</p>
+  </div>
+  <div class="rep">
+    <p class="k">YOUR SOLVEXO CONTACT</p>
+    <div class="l"><span>Name</span><i></i><span>WhatsApp</span><i></i></div>
+  </div>
+  <div class="foot"><span class="pw"><img src="icon.png" alt=""><span>Powered by <b>Solvexo</b> · i9 Experts</span></span><span>sales@solvexo.store</span></div>
+</div>
+
+</body></html>
