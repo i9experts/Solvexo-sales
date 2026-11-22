@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Solvexo Counter Tent Card</title>
+<style>
+@font-face{font-family:Poppins;font-weight:400;src:url(fonts/poppins-latin-400-normal.woff2)}
+@font-face{font-family:Poppins;font-weight:600;src:url(fonts/poppins-latin-600-normal.woff2)}
+@font-face{font-family:Poppins;font-weight:700;src:url(fonts/poppins-latin-700-normal.woff2)}
+@font-face{font-family:Poppins;font-weight:800;src:url(fonts/poppins-latin-800-normal.woff2)}
+@font-face{font-family:Nastaliq;font-weight:400;src:url(fonts/noto-nastaliq-urdu-arabic-400-normal.woff2)}
+@font-face{font-family:Nastaliq;font-weight:700;src:url(fonts/noto-nastaliq-urdu-arabic-700-normal.woff2)}
+:root{--t:#D97757;--c:#F59373;--r:#B85C3E;--ink:#1F1A17;--paper:#FFFDFB;--sand:#F7ECE5;--mute:#5E534D;--line:#EAD9CF}
+/* Flat sheet: two A6 panels (105 x 148 mm each) stacked, + 3 mm bleed = 111 x 302 mm. Fold at the centre line. */
+@page{size:111mm 302mm;margin:0}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Poppins,sans-serif;color:var(--ink);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.sheet{width:111mm;height:302mm;position:relative;overflow:hidden;background:var(--paper)}
+.panel{position:absolute;left:0;width:111mm;height:151mm;overflow:hidden}
+.panel.top{top:0;transform:rotate(180deg)}   /* upside-down so both faces read upright once folded */
+.panel.bot{top:151mm}
+/* inside a panel: bleed is on the left, right and outer edge; the fold edge is the panel's top */
+.band{position:absolute;left:0;right:0;top:0;height:33mm;background:var(--t)}
+.band .deco{position:absolute;right:-10mm;top:-14mm;width:36mm;height:36mm;border-radius:8mm;background:var(--c);opacity:.55}
+.band .in{position:absolute;left:9mm;right:9mm;top:7mm}
+.pill{display:inline-block;background:var(--ink);color:#fff;font-weight:700;font-size:5.6pt;letter-spacing:.14em;padding:.9mm 2.4mm;border-radius:3mm}
+.store{font-weight:800;font-size:15pt;line-height:1.1;color:#fff;margin-top:2mm;letter-spacing:-.01em}
+.body{position:absolute;left:9mm;right:9mm;top:38mm;text-align:center}
+.h{font-weight:800;font-size:13.5pt;line-height:1.12;letter-spacing:-.01em}
+.h span{color:var(--t)}
+.ur{font-family:Nastaliq,serif;direction:rtl;unicode-bidi:isolate;font-size:9.5pt;line-height:2.1;margin-top:.6mm}
+.qrbox{position:relative;width:50mm;height:50mm;margin:3.6mm auto 0;background:#fff;border-radius:3mm;padding:3.5mm;box-shadow:0 0 0 .5mm var(--line)}
+.qrbox img{width:100%;height:100%;display:block}
+.cn{position:absolute;width:6mm;height:6mm;border:1mm solid var(--t)}
+.cn.a{left:-1.4mm;top:-1.4mm;border-right:none;border-bottom:none;border-radius:2mm 0 0 0}
+.cn.b{right:-1.4mm;top:-1.4mm;border-left:none;border-bottom:none;border-radius:0 2mm 0 0}
+.cn.c{left:-1.4mm;bottom:-1.4mm;border-right:none;border-top:none;border-radius:0 0 0 2mm}
+.cn.d{right:-1.4mm;bottom:-1.4mm;border-left:none;border-top:none;border-radius:0 0 2mm 0}
+.scan{font-weight:700;font-size:7pt;letter-spacing:.16em;margin-top:2.6mm;color:var(--r)}
+.url{font-weight:600;font-size:7.6pt;margin-top:.6mm;word-break:break-all}
+.feats{position:absolute;left:9mm;right:9mm;bottom:15mm;display:flex;justify-content:space-between}
+.f{display:flex;flex-direction:column;align-items:center;gap:1mm;width:28mm;text-align:center;font-size:5.6pt;font-weight:600;line-height:1.25}
+.f i{width:6.5mm;height:6.5mm;border-radius:1.8mm;background:var(--sand);display:flex;align-items:center;justify-content:center}
+.pw{position:absolute;left:9mm;right:9mm;bottom:6mm;display:flex;justify-content:center;align-items:center;gap:1.5mm;font-size:5.4pt;color:var(--mute)}
+.pw img{height:3.6mm}
+.pw b{color:var(--ink)}
+.fold{position:absolute;top:150.85mm;width:3mm;height:0;border-top:.25pt solid #999}
+.fold.l{left:0}.fold.r{right:0}
+svg{display:block}
+</style></head>
+<body>
+<div class="sheet">
+  <!--PANEL--><div class="panel {{POS}}">
+    <div class="band"><div class="deco"></div><div class="in">
+      <span class="pill">NOW ONLINE</span>
+      <p class="store">{{STORE_NAME}}</p>
+    </div></div>
+    <div class="body">
+      <p class="h">Shop with us online,<br><span>anytime.</span></p>
+      <p class="ur">اب ہماری دکان آن لائن بھی — جب چاہیں آرڈر کریں</p>
+      <div class="qrbox"><span class="cn a"></span><span class="cn b"></span><span class="cn c"></span><span class="cn d"></span><img src="{{QR_FILE}}" alt="QR code to {{STORE_URL_TEXT}}"></div>
+      <p class="scan">SCAN TO SHOP</p>
+      <p class="url">{{STORE_URL_TEXT}}</p>
+    </div>
+    <div class="feats">
+      <div class="f"><i><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#B85C3E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg></i>See all our products</div>
+      <div class="f"><i><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#B85C3E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></i>Order any time, from home</div>
+      <div class="f"><i><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#B85C3E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20.6 13.4l-7.2 7.2a2 2 0 0 1-2.8 0L3 13V3h10l7.6 7.6a2 2 0 0 1 0 2.8z"/><circle cx="7.5" cy="7.5" r="1.3"/></svg></i>Check prices &amp; stock</div>
+    </div>
+    <div class="pw"><img src="icon.png" alt=""><span>Powered by <b>Solvexo</b></span></div>
+  </div><!--/PANEL-->
+  <span class="fold l"></span><span class="fold r"></span>
+</div>
+</body></html>
