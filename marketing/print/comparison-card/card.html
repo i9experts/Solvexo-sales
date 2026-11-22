@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Solvexo Before / After Card</title>
+<style>
+@font-face{font-family:Poppins;font-weight:400;src:url(../tent-card/fonts/poppins-latin-400-normal.woff2)}
+@font-face{font-family:Poppins;font-weight:600;src:url(../tent-card/fonts/poppins-latin-600-normal.woff2)}
+@font-face{font-family:Poppins;font-weight:700;src:url(../tent-card/fonts/poppins-latin-700-normal.woff2)}
+@font-face{font-family:Poppins;font-weight:800;src:url(../tent-card/fonts/poppins-latin-800-normal.woff2)}
+@font-face{font-family:Nastaliq;font-weight:400;src:url(../tent-card/fonts/noto-nastaliq-urdu-arabic-400-normal.woff2)}
+@font-face{font-family:Nastaliq;font-weight:700;src:url(../tent-card/fonts/noto-nastaliq-urdu-arabic-700-normal.woff2)}
+:root{--t:#D97757;--c:#F59373;--r:#B85C3E;--ink:#1F1A17;--paper:#FFFDFB;--sand:#F7ECE5;--mute:#5E534D;--line:#EAD9CF;--g1:#ECEAE7;--g2:#C9C4BF;--g3:#7D7670}
+/* A5 landscape (210 x 148 mm) + 3 mm bleed = 216 x 154 mm. Safe area 8 mm from sheet edge. */
+@page{size:216mm 154mm;margin:0}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Poppins,sans-serif;color:var(--ink);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.page{width:216mm;height:154mm;position:relative;overflow:hidden;page-break-after:always}
+.ur{font-family:Nastaliq,serif;direction:rtl;unicode-bidi:isolate}
+/* ---------- FRONT ---------- */
+.half{position:absolute;top:0;bottom:0;width:108mm;overflow:hidden}
+.L{left:0;background:#F3F1EE}
+.R{right:0;background:var(--paper)}
+.R .glow{position:absolute;right:-20mm;top:-26mm;width:70mm;height:70mm;border-radius:16mm;background:var(--c);opacity:.25}
+.lab{position:absolute;top:9mm;left:10mm;display:flex;align-items:center;gap:2.4mm}
+.R .lab{left:auto;right:10mm;left:14mm}
+.lab .tag{font-weight:700;font-size:6.4pt;letter-spacing:.16em;padding:1mm 2.6mm;border-radius:3mm}
+.L .tag{background:var(--g3);color:#fff}
+.R .tag{background:var(--t);color:#fff}
+.lab h2{font-weight:800;font-size:13pt;letter-spacing:-.01em}
+.L h2{color:var(--g3)}
+.R .lab img{height:6.2mm}
+/* BEFORE illustration */
+.ill{position:absolute;left:10mm;right:10mm;top:22mm;height:70mm}
+.R .ill{left:14mm;right:10mm}
+.ledger{position:absolute;left:0;top:5mm;width:36mm;height:58mm;background:#FBF8EF;border:.4mm solid var(--g2);border-radius:1.5mm;transform:rotate(-5deg);padding:3mm 2.6mm;box-shadow:.8mm 1mm 0 var(--g1)}
+.ledger .ttl{font-size:5pt;font-weight:700;color:var(--g3);border-bottom:.3mm solid var(--g2);padding-bottom:.8mm;margin-bottom:1mm}
+.ledger .ln{font-size:5.4pt;color:#6E6862;line-height:2.1;border-bottom:.2mm dashed #DDD7CE;display:flex;justify-content:space-between}
+.ledger .x{text-decoration:line-through;color:#B05A4A}
+.chat{position:absolute;left:38mm;top:0;width:38mm;background:#fff;border:.4mm solid var(--g2);border-radius:2.5mm;padding:2mm;transform:rotate(3deg);box-shadow:.8mm 1mm 0 var(--g1)}
+.chat .hd{font-size:4.6pt;font-weight:700;color:var(--g3);margin-bottom:1.2mm;display:flex;align-items:center;gap:1mm}
+.chat .hd i{width:3mm;height:3mm;border-radius:50%;background:#B9D7B0}
+.b{font-size:5.2pt;line-height:1.3;padding:1mm 1.6mm;border-radius:1.6mm;margin-bottom:1mm;max-width:85%}
+.b.in{background:var(--g1)}
+.b.out{background:#DCEFD6;margin-left:auto}
+.sheet{position:absolute;left:50mm;top:38mm;width:38mm;height:30mm;background:#fff;border:.4mm solid var(--g2);border-radius:1.2mm;transform:rotate(-2deg);overflow:hidden;box-shadow:.8mm 1mm 0 var(--g1)}
+.sheet .row{display:grid;grid-template-columns:1.6fr 1fr 1fr;font-size:5pt;color:#6E6862}
+.sheet .row span{border-right:.2mm solid #E4E0DA;border-bottom:.2mm solid #E4E0DA;padding:.6mm .8mm;white-space:nowrap;overflow:hidden}
+.sheet .row.h span{background:#EFEDE9;font-weight:700}
+.sheet .err{color:#B05A4A;font-weight:700}
+/* AFTER illustration: one dashboard */
+.dash{position:absolute;left:2mm;top:2mm;width:84mm;height:66mm;background:#fff;border-radius:3mm;box-shadow:0 1.6mm 5mm rgba(31,26,23,.16);overflow:hidden}
+.dash .top{height:7mm;background:var(--ink);display:flex;align-items:center;gap:1.6mm;padding:0 3mm}
+.dash .top i{width:3.4mm;height:3.4mm;border-radius:.8mm;background:var(--t)}
+.dash .top b{color:#fff;font-size:5.4pt}
+.dash .top span{margin-left:auto;font-size:4.4pt;color:#D9C9BF}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:1.6mm;padding:2.4mm 3mm 0}
+.kpi{background:var(--sand);border-radius:1.6mm;padding:1.4mm 1.8mm}
+.kpi small{display:block;font-size:4.2pt;color:var(--mute)}
+.kpi b{display:block;font-size:7.4pt;font-weight:800}
+.mid{display:grid;grid-template-columns:1.2fr 1fr;gap:2mm;padding:2mm 3mm 0}
+.chart{background:#FDF8F5;border-radius:1.6mm;padding:1.6mm;height:30mm;display:flex;flex-direction:column}
+.chart small{font-size:4.2pt;color:var(--mute)}
+.bars{flex:1;display:flex;align-items:flex-end;gap:1.2mm;padding-top:1mm}
+.bars i{flex:1;background:var(--c);border-radius:.6mm .6mm 0 0}
+.bars i.hi{background:var(--t)}
+.ord{font-size:4.4pt}
+.ord small{font-size:4.2pt;color:var(--mute);display:block;margin-bottom:.6mm}
+.ord .o{display:flex;justify-content:space-between;padding:1.5mm 0;border-bottom:.2mm solid var(--line)}
+.ord .o em{font-style:normal;font-weight:700;font-size:3.8pt;padding:.2mm 1mm;border-radius:1mm;background:var(--sand);color:var(--r)}
+.syncrow{margin:3mm 3mm 0;background:var(--ink);color:#fff;border-radius:1.6mm;padding:1.4mm 2mm;font-size:4.6pt;display:flex;align-items:center;gap:1.4mm}
+.syncrow i{width:3mm;height:3mm;border-radius:50%;background:var(--t);flex:none}
+.sample{position:absolute;right:10mm;top:92mm;font-size:4.4pt;color:var(--mute)}
+/* bullets */
+.pts{position:absolute;left:10mm;right:8mm;bottom:9mm;display:flex;flex-direction:column;gap:2.2mm}
+.R .pts{left:14mm;right:10mm}
+.pt{display:flex;align-items:flex-start;gap:2.4mm}
+.pt .ic{width:5.6mm;height:5.6mm;border-radius:50%;display:flex;align-items:center;justify-content:center;flex:none;margin-top:.4mm}
+.L .pt .ic{background:#E2DCD6}
+.R .pt .ic{background:var(--t)}
+.pt b{display:block;font-size:8pt;line-height:1.2}
+.L .pt b{color:#55504B}
+.pt .u{display:block;font-size:7pt;line-height:1.75;color:var(--mute);text-align:left}
+/* centre arrow */
+.arrow{position:absolute;left:50%;top:50mm;transform:translateX(-50%);width:13mm;height:13mm;border-radius:50%;background:var(--ink);display:flex;align-items:center;justify-content:center;box-shadow:0 0 0 1.6mm var(--paper)}
+/* ---------- BACK (rep side) ---------- */
+.back{background:var(--paper)}
+.back .bar{position:absolute;left:0;right:0;top:0;height:22mm;background:var(--ink)}
+.back .bar .in{position:absolute;left:10mm;right:10mm;top:8.4mm;display:flex;justify-content:space-between;align-items:center}
+.back .bar h2{color:#fff;font-weight:800;font-size:12pt}
+.back .bar span{font-weight:700;font-size:6pt;letter-spacing:.14em;color:var(--c)}
+.cols{position:absolute;left:10mm;right:10mm;top:28mm;display:grid;grid-template-columns:1fr 1fr;gap:7mm}
+.cols h3{font-weight:700;font-size:8.6pt;margin-bottom:2.2mm;display:flex;align-items:center;gap:1.8mm}
+.cols h3::before{content:"";width:4.5mm;height:1.1mm;background:var(--t);border-radius:1mm}
+.q{display:flex;gap:2mm;margin-bottom:2.2mm;font-size:7pt;line-height:1.35}
+.q .n{width:5mm;height:5mm;border-radius:50%;background:var(--sand);color:var(--r);font-weight:700;font-size:6.4pt;display:flex;align-items:center;justify-content:center;flex:none}
+.q i{display:block;font-style:normal;color:var(--mute);font-size:6.2pt}
+.flow .s{display:grid;grid-template-columns:13mm 1fr;gap:2mm;font-size:6.8pt;line-height:1.35;padding:1.4mm 0;border-bottom:.25mm dashed var(--line)}
+.flow .s b{color:var(--r);font-size:6.4pt}
+.close{position:absolute;left:10mm;right:10mm;bottom:9mm;background:var(--sand);border-radius:3mm;padding:3mm 4mm;display:grid;grid-template-columns:1fr 1fr;gap:5mm;align-items:center}
+.close .en{font-size:7.2pt;line-height:1.4}
+.close .en b{color:var(--r)}
+.close .u{font-size:8.4pt;line-height:1.95;text-align:right}
+.rules{position:absolute;left:10mm;right:10mm;bottom:31mm;font-size:5.8pt;color:var(--mute)}
+.rules b{color:var(--ink)}
+.qa{position:absolute;left:10mm;right:10mm;top:78mm}
+.qa h3{font-weight:700;font-size:8.6pt;margin-bottom:2.2mm;display:flex;align-items:center;gap:1.8mm}
+.qa h3::before{content:"";width:4.5mm;height:1.1mm;background:var(--t);border-radius:1mm}
+.qa .g{display:grid;grid-template-columns:repeat(3,1fr);gap:3mm}
+.qa .c{border:.3mm solid var(--line);border-radius:2.5mm;padding:2.4mm 3mm;background:#fff}
+.qa .c b{display:block;font-size:6.8pt;color:var(--r);margin-bottom:.8mm}
+.qa .c span{display:block;font-size:6.2pt;line-height:1.4;color:var(--ink)}
+svg{display:block}
+</style></head>
+<body>
+
+<!-- ================= FRONT: shown to the shop owner ================= -->
+<div class="page front">
+  <div class="half L">
+    <div class="lab"><span class="tag">TODAY</span><h2>Three places, lots of guessing</h2></div>
+    <div class="ill">
+      <div class="ledger">
+        <p class="ttl">STOCK REGISTER</p>
+        <p class="ln"><span>Earbuds</span><span class="x">12</span></p>
+        <p class="ln"><span>Phone case blk</span><span>30?</span></p>
+        <p class="ln"><span>Charger 20W</span><span class="x">8</span></p>
+        <p class="ln"><span>Smart watch</span><span>4</span></p>
+        <p class="ln"><span>Cable USB-C</span><span>??</span></p>
+        <p class="ln"><span>Power bank</span><span class="x">6</span></p>
+      </div>
+      <div class="chat">
+        <p class="hd"><i></i>Customer · WhatsApp</p>
+        <p class="b in">Is the black case available?</p>
+        <p class="b out">Yes, sending now</p>
+        <p class="b in">Price? And the earbuds?</p>
+        <p class="b out">Sorry, earbuds sold out</p>
+      </div>
+      <div class="sheet">
+        <div class="row h"><span>Item</span><span>Sold</span><span>Left</span></div>
+        <div class="row"><span>Earbuds</span><span>9</span><span>3</span></div>
+        <div class="row"><span>Case blk</span><span>14</span><span class="err">#REF!</span></div>
+        <div class="row"><span>Charger</span><span>?</span><span>5</span></div>
+        <div class="row"><span>Watch</span><span>2</span><span>2</span></div>
+        <div class="row"><span>Cable</span><span></span><span></span></div>
+      </div>
+    </div>
+    <div class="pts">
+      <div class="pt"><span class="ic"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#7D7670" stroke-width="3.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></span><div><b>Stock counted by hand, often wrong</b><span class="u ur">اسٹاک کا حساب ہاتھ سے — اکثر غلط</span></div></div>
+      <div class="pt"><span class="ic"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#7D7670" stroke-width="3.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></span><div><b>Orders lost in chats</b><span class="u ur">آرڈر چیٹ میں گم ہو جاتے ہیں</span></div></div>
+      <div class="pt"><span class="ic"><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#7D7670" stroke-width="3.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></span><div><b>No clear picture of what sells</b><span class="u ur">پتا ہی نہیں چلتا کیا زیادہ بِکا</span></div></div>
+    </div>
+  </div>
+
+  <div class="half R">
+    <div class="glow"></div>
+    <div class="lab"><span class="tag">WITH</span><img src="logo.png" alt="Solvexo"></div>
+    <div class="ill">
+      <div class="dash">
+        <div class="top"><i></i><b>Your Store · Dashboard</b><span>Today</span></div>
+        <div class="kpis">
+          <div class="kpi"><small>Sales today</small><b>Rs 18,450</b></div>
+          <div class="kpi"><small>Orders</small><b>14</b></div>
+          <div class="kpi"><small>Low stock</small><b>2 items</b></div>
+        </div>
+        <div class="mid">
+          <div class="chart"><small>Sales this week</small><div class="bars"><i style="height:45%"></i><i style="height:62%"></i><i style="height:38%"></i><i style="height:70%"></i><i style="height:55%"></i><i class="hi" style="height:92%"></i><i style="height:66%"></i></div></div>
+          <div class="ord"><small>Latest orders</small>
+            <div class="o"><span>#1042 Online</span><em>PAID</em></div>
+            <div class="o"><span>#1041 Counter</span><em>PAID</em></div>
+            <div class="o"><span>#1040 Online</span><em>PACKED</em></div>
+            <div class="o"><span>#1039 Counter</span><em>PAID</em></div>
+          </div>
+        </div>
+        <div class="syncrow"><i></i>Stock synced: shop counter + online store</div>
+      </div>
+    </div>
+    <p class="sample">Sample screen for illustration</p>
+    <div class="pts">
+      <div class="pt"><span class="ic"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><div><b>One stock count that updates itself</b><span class="u ur">ایک ہی اسٹاک — خود اپڈیٹ ہوتا ہے</span></div></div>
+      <div class="pt"><span class="ic"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><div><b>Every order in one place</b><span class="u ur">ہر آرڈر ایک ہی جگہ</span></div></div>
+      <div class="pt"><span class="ic"><svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3.6" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><div><b>Clear sales reports, any time</b><span class="u ur">سیل کی رپورٹ — جب چاہیں</span></div></div>
+    </div>
+  </div>
+
+  <div class="arrow"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#F59373" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg></div>
+</div>
+
+<!-- ================= BACK: rep cheat sheet ================= -->
+<div class="page back">
+  <div class="bar"><div class="in"><h2>How to use this card</h2><span>FOR THE SOLVEXO TEAM</span></div></div>
+  <div class="cols">
+    <div>
+      <h3>Ask first (1 minute)</h3>
+      <div class="q"><span class="n">1</span><div>What do you sell, and where?<i>Shop, Instagram, WhatsApp, marketplace</i></div></div>
+      <div class="q"><span class="n">2</span><div>How do you track stock and orders today?<i>Register, Excel, another app: point to the left side</i></div></div>
+      <div class="q"><span class="n">3</span><div>Who decides?<i>Owner, partner, manager</i></div></div>
+      <div class="q"><span class="n">4</span><div>What bothers you most?<i>Stock mistakes, missed orders, no online sales</i></div></div>
+    </div>
+    <div class="flow">
+      <h3>Then show (5 minutes)</h3>
+      <div class="s"><b>Card</b><span>Left side: “this is today”. Right side: “this is your shop on Solvexo”.</span></div>
+      <div class="s"><b>POS</b><span>Ring up a sale on the demo store, take payment, show the receipt.</span></div>
+      <div class="s"><b>Sync</b><span>Open the online store: the item’s stock has already dropped.</span></div>
+      <div class="s"><b>Close</b><span>Sign up together and add their first real product.</span></div>
+    </div>
+  </div>
+  <div class="qa">
+    <h3>Quick answers</h3>
+    <div class="g">
+      <div class="c"><b>“I already sell on Instagram.”</b><span>Keep doing it. Put your store link in your bio, so every order lands in one place instead of scattered DMs.</span></div>
+      <div class="c"><b>“I’m not good with technology.”</b><span>If you use WhatsApp, you can use this. Let’s add your first product together right now.</span></div>
+      <div class="c"><b>“How much? How do I get paid?”</b><span>7 days free. Show the sales sheet for current prices. COD and bank transfer come straight to you; 0% commission on them.</span></div>
+    </div>
+  </div>
+  <p class="rules"><b>Say only approved claims.</b> No promises about sales or income, the mobile POS app or custom domains. Prices only from solvexo.store/pricing.</p>
+  <div class="close">
+    <p class="en"><b>Closing line:</b> “Your shop counter and your online store, one app, one stock count. Shall we put your first product live now? It’s 7 days free, no card needed.”</p>
+    <p class="u ur">دکان کی سیل اور آن لائن آرڈر — ایک ہی ایپ، ایک ہی اسٹاک۔ ابھی پہلا پروڈکٹ لگا لیں؟ 7 دن مفت، کارڈ کی ضرورت نہیں۔</p>
+  </div>
+</div>
+
+</body></html>
