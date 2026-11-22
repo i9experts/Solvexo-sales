@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Solvexo Flyer A5</title>
+<style>
+@font-face{font-family:Poppins;font-weight:400;src:url(fonts/poppins-latin-400-normal.woff2)}
+@font-face{font-family:Poppins;font-weight:600;src:url(fonts/poppins-latin-600-normal.woff2)}
+@font-face{font-family:Poppins;font-weight:700;src:url(fonts/poppins-latin-700-normal.woff2)}
+@font-face{font-family:Poppins;font-weight:800;src:url(fonts/poppins-latin-800-normal.woff2)}
+@font-face{font-family:Nastaliq;font-weight:400;src:url(fonts/noto-nastaliq-urdu-arabic-400-normal.woff2)}
+@font-face{font-family:Nastaliq;font-weight:700;src:url(fonts/noto-nastaliq-urdu-arabic-700-normal.woff2)}
+:root{--t:#D97757;--c:#F59373;--r:#B85C3E;--ink:#1F1A17;--paper:#FFFDFB;--sand:#F7ECE5;--mute:#5E534D;--line:#EAD9CF}
+@page{size:154mm 216mm;margin:0}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Poppins,sans-serif;color:var(--ink);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.page{width:154mm;height:216mm;position:relative;overflow:hidden;background:var(--paper);page-break-after:always}
+/* safe area: 3mm bleed + 6mm margin = 9mm */
+.safe{position:absolute;left:9mm;right:9mm;top:9mm;bottom:9mm}
+h1,h2,h3,.pop{font-family:Poppins,sans-serif}
+.ur{font-family:Nastaliq,serif;direction:rtl;unicode-bidi:isolate}
+/* ---------- FRONT ---------- */
+.deco1{position:absolute;right:-26mm;top:-30mm;width:92mm;height:92mm;border-radius:20mm;background:var(--c);opacity:.35}
+.deco2{position:absolute;right:14mm;top:30mm;width:16mm;height:16mm;border-radius:4mm;background:var(--t);opacity:.25}
+.logo{height:11mm}
+.kicker{font-family:Poppins;font-weight:600;font-size:7pt;letter-spacing:.18em;text-transform:uppercase;color:var(--r);margin-top:7mm}
+.h1{font-family:Poppins;font-weight:800;font-size:25pt;line-height:1.04;letter-spacing:-.02em;margin-top:2mm}
+.h1 span{color:var(--t)}
+.urh{font-size:13pt;line-height:2.1;margin-top:1mm;color:var(--ink);text-align:left}
+.stage{position:absolute;left:0;right:0;top:83mm;height:73mm;background:var(--sand)}
+.stage .lbl{position:absolute;left:65mm;bottom:2.5mm;font-size:5.5pt;color:var(--mute);letter-spacing:.05em}
+.phone{position:absolute;left:17mm;top:-8mm;width:43mm;height:82mm;background:var(--ink);border-radius:7mm;padding:2.2mm;box-shadow:0 3mm 8mm rgba(31,26,23,.25)}
+.screen{width:100%;height:100%;background:#fff;border-radius:5mm;overflow:hidden;position:relative}
+.notch{position:absolute;left:50%;top:1.6mm;transform:translateX(-50%);width:12mm;height:2.6mm;background:var(--ink);border-radius:2mm}
+.sbar{padding:6mm 3mm 2mm;display:flex;align-items:center;gap:1.5mm;border-bottom:1px solid var(--line)}
+.sbar .dot{width:4mm;height:4mm;border-radius:1mm;background:var(--t)}
+.sbar b{font-family:Poppins;font-size:6.2pt}
+.url{font-size:4.6pt;color:var(--mute);padding:1.2mm 3mm;background:#F6F2EF}
+.banner{margin:2mm 3mm;height:13mm;border-radius:2mm;background:linear-gradient(120deg,#D97757,#F59373);color:#fff;padding:2mm 2.5mm}
+.banner b{font-family:Poppins;font-size:6.5pt;display:block}
+.banner span{font-size:4.8pt}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:2mm;padding:0 3mm}
+.prod{border:1px solid var(--line);border-radius:1.6mm;overflow:hidden}
+.prod i{display:block;height:8.5mm}
+.prod p{font-size:4.6pt;padding:.8mm 1.2mm 0}
+.prod b{font-size:5pt;padding:0 1.2mm 1mm;display:block;font-family:Poppins}
+.cart{position:absolute;left:3mm;right:3mm;bottom:3mm;height:6mm;border-radius:3mm;background:var(--ink);color:#fff;font-size:5pt;font-family:Poppins;font-weight:600;display:flex;align-items:center;justify-content:center}
+.pos{position:absolute;right:13mm;top:6mm;width:52mm;background:#fff;border-radius:3.5mm;box-shadow:0 3mm 8mm rgba(31,26,23,.18);padding:3.5mm}
+.pos .hd{display:flex;justify-content:space-between;align-items:center;margin-bottom:2mm}
+.pos .hd b{font-family:Poppins;font-size:7pt}
+.pos .tag{font-size:4.8pt;background:var(--sand);color:var(--r);padding:.6mm 1.6mm;border-radius:2mm;font-weight:600}
+.li{display:flex;justify-content:space-between;font-size:5.8pt;padding:1.1mm 0;border-bottom:1px dashed var(--line)}
+.tot{display:flex;justify-content:space-between;font-family:Poppins;font-weight:700;font-size:7.5pt;margin-top:1.6mm}
+.paid{margin-top:2.2mm;background:var(--t);color:#fff;border-radius:2mm;text-align:center;font-family:Poppins;font-weight:600;font-size:6pt;padding:1.6mm}
+.sync{position:absolute;right:11mm;top:50mm;width:56mm;background:var(--ink);color:#fff;border-radius:3mm;padding:2.4mm 3mm;display:flex;gap:2.2mm;align-items:center;box-shadow:0 2mm 6mm rgba(31,26,23,.25)}
+.sync .ic{width:6.5mm;height:6.5mm;border-radius:50%;background:var(--t);display:flex;align-items:center;justify-content:center;flex:none}
+.sync b{font-family:Poppins;font-size:6.4pt;display:block}
+.sync span{font-size:5.2pt;color:#E9DCD3}
+.bens{position:absolute;left:9mm;right:9mm;top:161mm;display:grid;grid-template-columns:repeat(3,1fr);gap:3mm}
+.ben{display:flex;gap:2mm;align-items:flex-start}
+.ben .ic{width:7mm;height:7mm;border-radius:2mm;background:var(--sand);display:flex;align-items:center;justify-content:center;flex:none}
+.ben b{font-family:Poppins;font-size:7pt;display:block;line-height:1.2}
+.ben span{font-size:5.8pt;color:var(--mute);line-height:1.3;display:block;margin-top:.4mm}
+.cta{position:absolute;left:0;right:0;bottom:0;height:34mm;background:var(--t);color:var(--ink)}
+.cta .in{position:absolute;left:9mm;right:9mm;top:5mm;bottom:9mm;display:flex;align-items:center;justify-content:space-between}
+.cta .big{font-family:Poppins;font-weight:800;font-size:15pt;line-height:1.05;color:#fff}
+.cta .sub{font-family:Poppins;font-weight:600;font-size:7pt;margin-top:1.6mm;color:var(--ink)}
+.cta .web{font-family:Poppins;font-weight:700;font-size:9pt;margin-top:1.4mm;color:var(--ink);letter-spacing:.02em}
+.qr{background:#fff;border-radius:2.5mm;padding:2mm;text-align:center}
+.qr img{width:22mm;height:22mm;display:block}
+.qr span{font-family:Poppins;font-weight:700;font-size:5.6pt;letter-spacing:.12em;display:block;margin-top:1mm}
+/* ---------- BACK ---------- */
+.bk-h{display:flex;justify-content:space-between;align-items:center}
+.bk-h img{height:8.5mm}
+.bk-h span{font-family:Poppins;font-weight:600;font-size:6.5pt;color:var(--t);letter-spacing:.08em}
+.h2{font-family:Poppins;font-weight:800;font-size:16pt;line-height:1.1;letter-spacing:-.01em;margin-top:5mm}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:2.5mm;margin-top:3.5mm}
+.step{background:var(--sand);border-radius:3mm;padding:3mm}
+.step .n{width:6.5mm;height:6.5mm;border-radius:50%;background:var(--t);color:#fff;font-family:Poppins;font-weight:700;font-size:7.5pt;display:flex;align-items:center;justify-content:center}
+.step b{font-family:Poppins;font-size:7.6pt;display:block;margin-top:2mm;line-height:1.2}
+.step span{font-size:5.9pt;color:var(--mute);display:block;margin-top:.8mm;line-height:1.35}
+.h3{font-family:Poppins;font-weight:700;font-size:9.5pt;margin-top:4mm}
+.mods{display:grid;grid-template-columns:repeat(3,1fr);gap:2mm 3mm;margin-top:2.5mm}
+.mod{display:flex;gap:1.8mm;align-items:center;font-size:6.4pt}
+.mod .ic{width:6mm;height:6mm;border-radius:1.6mm;background:var(--sand);display:flex;align-items:center;justify-content:center;flex:none}
+.mod b{font-family:Poppins;font-weight:600}
+.offer{margin-top:4.5mm;background:var(--ink);color:#fff;border-radius:3.5mm;padding:3.5mm 4mm;display:grid;grid-template-columns:repeat(4,1fr);gap:2mm;position:relative}
+.offer .o b{font-family:Poppins;font-weight:800;font-size:15pt;color:var(--c);display:block;line-height:1}
+.offer .o span{font-size:5.8pt;line-height:1.3;display:block;margin-top:1mm;color:#F1E6DF}
+.offer .badge{position:absolute;left:4mm;top:-2.6mm;background:var(--t);color:var(--ink);font-family:Poppins;font-weight:700;font-size:5.4pt;letter-spacing:.12em;padding:.8mm 2.2mm;border-radius:2mm}
+.fine{font-size:5pt;color:var(--mute);margin-top:1.4mm}
+.urbox{margin-top:2.5mm;border-right:1.2mm solid var(--t);background:#fff;padding:1.5mm 3.5mm 1.5mm 3mm;text-align:right}
+.urbox .t{font-size:10.5pt;font-weight:700;line-height:1.9}
+.urbox p{font-size:7.8pt;line-height:2.05}
+.bottom{position:absolute;left:9mm;right:9mm;bottom:9mm;display:flex;gap:4mm;align-items:stretch}
+.rep{flex:1;border:1px dashed #C9B3A9;border-radius:3mm;padding:2.8mm 3.5mm;display:flex;flex-direction:column;justify-content:space-between}
+.rep .t{font-family:Poppins;font-weight:600;font-size:6.4pt;color:var(--r)}
+.rep .l{display:flex;gap:2mm;align-items:flex-end;font-size:6pt;color:var(--mute);margin-top:1.2mm}
+.rep .l i{flex:1;border-bottom:1px solid #B9A69D;height:3mm}
+.bqr{width:33mm;background:var(--sand);border-radius:3mm;padding:2.5mm;text-align:center}
+.bqr img{width:21mm;height:21mm}
+.bqr b{font-family:Poppins;font-size:6pt;display:block;margin-top:.8mm}
+.bqr span{font-size:5.4pt;color:var(--mute)}
+.foot{position:absolute;left:9mm;right:9mm;bottom:3.6mm;display:flex;justify-content:space-between;font-size:5pt;color:var(--mute)}
+.foot b{color:var(--t);font-family:Poppins}
+.for{margin-top:3.5mm}.for .h{font-family:Poppins;font-weight:700;font-size:7.5pt}.chips{display:flex;flex-wrap:wrap;gap:1.4mm;margin-top:1.5mm}.chips span{font-size:5.8pt;font-weight:600;background:var(--sand);color:var(--r);padding:1mm 2.6mm;border-radius:4mm}
+svg{display:block}
+</style></head>
+<body>
+
+<!-- ================= FRONT ================= -->
+<div class="page">
+  <div class="deco1"></div><div class="deco2"></div>
+  <div class="safe">
+    <img class="logo" src="logo.png" alt="Solvexo">
+    <p class="kicker">Online store + POS · one app</p>
+    <h1 class="h1">Your shop counter<br>and online store.<br><span>One stock count.</span></h1>
+    <p class="ur urh">دکان کی سیل اور آن لائن آرڈر — ایک ہی ایپ، ایک ہی اسٹاک۔</p>
+  </div>
+
+  <div class="stage">
+    <div class="phone"><div class="screen">
+      <div class="notch"></div>
+      <div class="sbar"><div class="dot"></div><b>Your Store</b></div>
+      <div class="url">yourstore.solvexo.store</div>
+      <div class="banner"><b>New arrivals</b><span>Order online, cash on delivery</span></div>
+      <div class="grid">
+        <div class="prod"><i style="background:linear-gradient(135deg,#F7D9CB,#F59373)"></i><p>Wireless Earbuds</p><b>Rs 4,200</b></div>
+        <div class="prod"><i style="background:linear-gradient(135deg,#EDE3DC,#C9B3A9)"></i><p>Phone Case</p><b>Rs 450</b></div>
+        <div class="prod"><i style="background:linear-gradient(135deg,#F3E7DF,#D97757)"></i><p>Smart Watch</p><b>Rs 6,900</b></div>
+        <div class="prod"><i style="background:linear-gradient(135deg,#E9E1DB,#8E7F77)"></i><p>Charger 20W</p><b>Rs 1,350</b></div>
+      </div>
+      <div class="cart">Add to cart</div>
+    </div></div>
+
+    <div class="pos">
+      <div class="hd"><b>Current sale</b><span class="tag">POS · Counter</span></div>
+      <div class="li"><span>1× Wireless Earbuds</span><span>Rs 4,200</span></div>
+      <div class="li"><span>2× Phone Case</span><span>Rs 900</span></div>
+      <div class="tot"><span>Total</span><span>Rs 5,100</span></div>
+      <div class="paid">Payment received · Receipt printed</div>
+    </div>
+
+    <div class="sync">
+      <div class="ic"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12a9 9 0 0 1-15.5 6.3L3 16"/><path d="M3 12a9 9 0 0 1 15.5-6.3L21 8"/><path d="M21 3v5h-5"/><path d="M3 21v-5h5"/></svg></div>
+      <div><b>Stock synced instantly</b><span>Earbuds 12 to 11, shop and online</span></div>
+    </div>
+    <p class="lbl">Sample screens for illustration</p>
+  </div>
+
+  <div class="bens">
+    <div class="ben"><div class="ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#B85C3E" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></div><div><b>Your own online store</b><span>Your brand, your link, orders in one place</span></div></div>
+    <div class="ben"><div class="ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#B85C3E" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg></div><div><b>POS for your counter</b><span>Fast sales, discounts, receipts, staff PIN login</span></div></div>
+    <div class="ben"><div class="ic"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#B85C3E" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2"/></svg></div><div><b>Real sales reports</b><span>Revenue, best sellers and customers at a glance</span></div></div>
+  </div>
+
+  <div class="cta"><div class="in">
+    <div>
+      <p class="big">7 days free.<br>No card needed.</p>
+      <p class="sub">0% commission on cash on delivery and shop sales</p>
+      <p class="web">solvexo.store</p>
+    </div>
+    <div class="qr"><img src="qr.svg" alt="QR code to solvexo.store"><span>SCAN TO START</span></div>
+  </div></div>
+</div>
+
+<!-- ================= BACK ================= -->
+<div class="page">
+  <div class="safe">
+    <div class="bk-h"><img src="logo.png" alt="Solvexo"><span>CREATE · SELL · MANAGE · GROW</span></div>
+
+    <h2 class="h2">Start selling online<br>in 3 simple steps</h2>
+    <div class="steps">
+      <div class="step"><div class="n">1</div><b>Sign up free</b><span>Scan the QR or visit solvexo.store. Email or Google sign-in.</span></div>
+      <div class="step"><div class="n">2</div><b>Add your products</b><span>Photos, prices and stock. Pick a theme for your store.</span></div>
+      <div class="step"><div class="n">3</div><b>Sell everywhere</b><span>Share your store link and sell at the counter with POS. Live straight away.</span></div>
+    </div>
+
+    <h3 class="h3">Everything in one app</h3>
+    <div class="mods">
+      <div class="mod"><div class="ic"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#B85C3E" stroke-width="2.4" stroke-linecap="round"><path d="M3 9l1.5-5h15L21 9M3 9h18v11H3zM9 13h6"/></svg></div><b>Online store builder</b></div>
+      <div class="mod"><div class="ic"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#B85C3E" stroke-width="2.4" stroke-linecap="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8"/></svg></div><b>Point of sale</b></div>
+      <div class="mod"><div class="ic"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#B85C3E" stroke-width="2.4" stroke-linecap="round"><path d="M21 8l-9-5-9 5 9 5 9-5zM3 8v8l9 5 9-5V8"/></svg></div><b>Inventory sync</b></div>
+      <div class="mod"><div class="ic"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#B85C3E" stroke-width="2.4" stroke-linecap="round"><path d="M9 11l3 3 8-8M20 12v7a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h9"/></svg></div><b>Orders &amp; customers</b></div>
+      <div class="mod"><div class="ic"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#B85C3E" stroke-width="2.4" stroke-linecap="round"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2"/></svg></div><b>Sales analytics</b></div>
+      <div class="mod"><div class="ic"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#B85C3E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.7 5.6 6.1.9-4.4 4.3 1 6.1L12 17l-5.4 2.9 1-6.1L3.2 9.5l6.1-.9z"/></svg></div><b>Loyalty &amp; discounts</b></div>
+    </div>
+
+    <div class="offer">
+      <span class="badge">LAUNCH OFFER</span>
+      <div class="o"><b>7 days</b><span>Free trial,<br>no card needed</span></div>
+      <div class="o"><b>US$1</b><span>A month for the<br>first 3 months</span></div>
+      <div class="o"><b>US$6</b><span>Plans from, per<br>month after that</span></div>
+      <div class="o"><b>0%</b><span>Commission on COD<br>&amp; in-shop sales</span></div>
+    </div>
+    <p class="fine">Offer valid at time of printing (November 2026) and may change. See solvexo.store/pricing for current plans.</p>
+
+    <div class="for"><p class="h">Made for</p><div class="chips"><span>Retail shops</span><span>Fashion &amp; clothing</span><span>Beauty &amp; cosmetics</span><span>Food counters</span><span>Instagram &amp; WhatsApp sellers</span><span>Creators &amp; educators</span></div></div>
+
+    <div class="urbox ur">
+      <p class="t">اپنا آن لائن اسٹور آج ہی شروع کریں</p>
+      <p>7 دن بالکل مفت، کارڈ کی ضرورت نہیں۔</p>
+      <p>دکان میں کچھ بِکا تو آن لائن اسٹاک خود ہی کم ہو جائے گا۔</p>
+      <p>کیش آن ڈیلیوری اور دکان کی سیل پر کوئی کمیشن نہیں۔</p>
+    </div>
+  </div>
+
+  <div class="bottom">
+    <div class="rep">
+      <p class="t">Your Solvexo contact</p>
+      <div class="l"><span>Name</span><i></i></div>
+      <div class="l"><span>WhatsApp</span><i></i></div>
+      <div class="l"><span>Visit date</span><i></i></div>
+    </div>
+    <div class="bqr"><img src="qr.svg" alt="QR code to solvexo.store"><b>Scan to start</b><span>solvexo.store</span></div>
+  </div>
+  <div class="foot"><span><b>Solvexo</b> · Powered by i9 Experts · sales@solvexo.store</span><span>solvexo.store</span></div>
+</div>
+
+</body></html>
