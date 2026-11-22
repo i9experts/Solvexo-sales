@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Powered by Solvexo Sticker</title>
+<style>
+@font-face{font-family:Poppins;font-weight:600;src:url(../tent-card/fonts/poppins-latin-600-normal.woff2)}
+@font-face{font-family:Poppins;font-weight:700;src:url(../tent-card/fonts/poppins-latin-700-normal.woff2)}
+@font-face{font-family:Poppins;font-weight:800;src:url(../tent-card/fonts/poppins-latin-800-normal.woff2)}
+:root{--t:#D97757;--c:#F59373;--r:#B85C3E;--ink:#1F1A17;--paper:#FFFFFF;--sand:#F7ECE5}
+/* 2 in (50.8 mm) round + 2 mm bleed = 54.8 mm square page. Cut: 50.8 mm circle, centred. */
+@page{size:54.8mm 54.8mm;margin:0}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Poppins,sans-serif;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.page{width:54.8mm;height:54.8mm;position:relative;overflow:hidden;page-break-after:always}
+.page svg{position:absolute;left:0;top:0;width:54.8mm;height:54.8mm}
+</style></head>
+<body>
+
+<!-- A: Ring badge (terracotta) -->
+<div class="page" id="ring">
+<svg viewBox="0 0 548 548" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <path id="arcTop" d="M 274,274 m -196,0 a 196,196 0 1,1 392,0"/>
+    <path id="arcBot" d="M 274,274 m -216,0 a 216,216 0 0,0 432,0"/>
+  </defs>
+  <rect width="548" height="548" fill="#D97757"/>               <!-- bleed -->
+  <circle cx="274" cy="274" r="254" fill="#D97757"/>             <!-- cut edge r=254 (50.8 mm) -->
+  <circle cx="274" cy="274" r="168" fill="#FFFFFF"/>
+  <circle cx="274" cy="274" r="168" fill="none" stroke="#F59373" stroke-width="6"/>
+  <text font-family="Poppins" font-weight="700" font-size="40" letter-spacing="9" fill="#FFFFFF">
+    <textPath href="#arcTop" startOffset="50%" text-anchor="middle">POWERED BY</textPath>
+  </text>
+  <text font-family="Poppins" font-weight="700" font-size="34" letter-spacing="7" fill="#1F1A17">
+    <textPath href="#arcBot" startOffset="50%" text-anchor="middle">SOLVEXO.STORE</textPath>
+  </text>
+  <circle cx="64" cy="274" r="7" fill="#FFFFFF"/><circle cx="484" cy="274" r="7" fill="#FFFFFF"/>
+  <image href="solvexo-icon.png" x="194" y="146" width="160" height="160"/>
+  <image href="solvexo-wordmark.png" x="174" y="326" width="200" height="45"/>
+</svg>
+</div>
+
+<!-- B: Clean white -->
+<div class="page" id="clean">
+<svg viewBox="0 0 548 548" xmlns="http://www.w3.org/2000/svg">
+  <rect width="548" height="548" fill="#FFFFFF"/>
+  <circle cx="274" cy="274" r="254" fill="#FFFFFF"/>
+  <circle cx="274" cy="274" r="224" fill="none" stroke="#D97757" stroke-width="10"/>
+  <image href="solvexo-icon.png" x="204" y="118" width="140" height="140"/>
+  <text x="274" y="316" text-anchor="middle" font-family="Poppins" font-weight="600" font-size="34" fill="#B85C3E" letter-spacing="6">POWERED BY</text>
+  <image href="solvexo-wordmark.png" x="129" y="338" width="290" height="65"/>
+</svg>
+</div>
+
+<!-- Cut line for the printer (die line) -->
+<div class="page" id="cut">
+<svg viewBox="0 0 548 548" xmlns="http://www.w3.org/2000/svg">
+  <rect width="548" height="548" fill="#FFFFFF"/>
+  <circle cx="274" cy="274" r="254" fill="none" stroke="#FF00FF" stroke-width="2"/>
+  <text x="274" y="282" text-anchor="middle" font-family="Poppins" font-weight="600" font-size="22" fill="#FF00FF">CUT LINE · 50.8 mm (2 in) circle</text>
+</svg>
+</div>
+
+</body></html>
