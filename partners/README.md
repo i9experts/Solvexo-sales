@@ -2,6 +2,7 @@
 
 **Status: PROPOSED, v0.1 (21 Nov 2026). Not approved. Not for signature.**
 
+- **[Partner MOU](mou/Solvexo_Partner_MOU.html):** branded Memorandum of Understanding template covering all four tiers (Registered, Silver, Gold, Regional), with tier schedule, code of conduct, verification checklist and territory annex. Draft v0.1, for legal and Shariah review before use.
 - **[Solvexo Channel Partner Programme](Solvexo_Channel_Partner_Programme.md):** the full programme: models, tiers, commission rules, territory, deal registration, conduct, legal and Islamic alignment, and next steps with the Lahore partner.
 
 ## Rules until the programme is approved

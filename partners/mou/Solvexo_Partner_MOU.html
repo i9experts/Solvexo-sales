@@ -1,0 +1,501 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Solvexo Channel Partner MOU</title>
+<style>
+:root{--t:#D97757;--c:#F59373;--r:#B85C3E;--ink:#1d1d1f;--mute:#6b6b70;--line:#ecdcd4;--soft:#fdf6f2}
+@page{size:A4;margin:22mm 18mm 20mm 18mm}
+*{box-sizing:border-box}
+body{font-family:Inter,"DejaVu Sans",sans-serif;color:var(--ink);font-size:9.6pt;line-height:1.55;margin:0}
+h1,h2,h3{font-family:"Inter Display",Inter,sans-serif;letter-spacing:-.01em}
+/* ---------- cover ---------- */
+.cover{height:296mm;width:210mm;position:relative;overflow:hidden;page-break-after:always;background:#fff}
+.cover .band{position:absolute;left:0;top:0;width:100%;height:118mm;background:linear-gradient(135deg,#D97757 0%,#C86A4C 60%,#B85C3E 100%)}
+.cover .tile{position:absolute;right:-28mm;top:-22mm;width:120mm;height:120mm;border-radius:22mm;background:#F59373;opacity:.55}
+.cover .tile2{position:absolute;right:30mm;top:62mm;width:34mm;height:34mm;border-radius:7mm;background:rgba(255,255,255,.18)}
+.cover .logo{position:absolute;left:20mm;top:22mm;height:20mm;background:#fff;border-radius:4mm;padding:3mm 5mm}
+.cover .logo img{height:14mm;display:block}
+.cover .kicker{position:absolute;left:20mm;top:70mm;color:#fff;font-size:10pt;letter-spacing:.22em;text-transform:uppercase;font-weight:600;opacity:.95}
+.cover .title{position:absolute;left:20mm;top:80mm;color:#fff;font-size:30pt;font-weight:800;line-height:1.08;width:150mm;margin:0}
+.cover .body{position:absolute;left:20mm;top:134mm;width:170mm}
+.cover .between{font-size:10pt;color:var(--mute);text-transform:uppercase;letter-spacing:.16em;font-weight:600;margin-bottom:5mm}
+.cover .party{border-left:3px solid var(--t);padding:2mm 0 2mm 5mm;margin-bottom:5mm}
+.cover .party b{display:block;font-size:13pt}
+.cover .party span{color:var(--mute);font-size:9.5pt}
+.cover .and{color:var(--t);font-weight:700;margin:0 0 5mm 5mm}
+.cover .meta{display:grid;grid-template-columns:repeat(3,1fr);gap:4mm;margin-top:10mm}
+.cover .meta div{background:var(--soft);border-radius:3mm;padding:4mm}
+.cover .meta small{display:block;color:var(--mute);font-size:7.5pt;text-transform:uppercase;letter-spacing:.12em;margin-bottom:1mm}
+.cover .meta b{font-size:10pt}
+.cover .status{position:absolute;left:20mm;bottom:30mm;width:170mm;border:1.5px dashed var(--t);border-radius:3mm;padding:4mm 5mm;color:var(--r);font-size:9pt;background:#fff}
+.cover .foot{position:absolute;left:20mm;right:20mm;bottom:12mm;display:flex;justify-content:space-between;color:var(--mute);font-size:8pt;border-top:1px solid var(--line);padding-top:3mm}
+.cover .tagline{color:var(--t);font-weight:700}
+/* ---------- content ---------- */
+.page{page-break-before:always}
+h2{font-size:15pt;color:var(--t);margin:0 0 3mm;padding-bottom:2mm;border-bottom:2px solid var(--c)}
+h2 .n{display:inline-block;min-width:9mm;color:var(--r)}
+h3{font-size:10.5pt;margin:5mm 0 1.5mm;color:var(--r)}
+section{margin-bottom:6mm;page-break-inside:auto}
+.clause{margin:0 0 6mm}
+.clause h2{font-size:11.5pt;border-bottom:1px solid var(--line);padding-bottom:1.5mm;margin-bottom:2mm}
+ol.sub{margin:0;padding-left:0;list-style:none;counter-reset:s}
+ol.sub>li{counter-increment:s;position:relative;padding-left:10mm;margin-bottom:1.6mm}
+ol.sub>li::before{content:attr(data-n);position:absolute;left:0;top:0;color:var(--r);font-weight:600;font-size:9pt}
+ul{margin:1mm 0 2mm;padding-left:5mm}
+li{margin-bottom:.8mm}
+p{margin:0 0 2mm}
+.lead{font-size:10.5pt;color:#333}
+table{width:100%;border-collapse:collapse;margin:2mm 0 4mm;font-size:8.8pt;page-break-inside:auto}
+tr{page-break-inside:avoid}
+th{background:var(--t);color:#fff;text-align:left;font-weight:600;padding:2.2mm 2.5mm;vertical-align:bottom}
+td{padding:2mm 2.5mm;border-bottom:1px solid var(--line);vertical-align:top}
+tbody tr:nth-child(even) td{background:var(--soft)}
+td.k{font-weight:600;width:28%}
+.tiers th{text-align:center}.tiers td{text-align:center}.tiers td:first-child,.tiers th:first-child{text-align:left;font-weight:600}
+.tiers th.reg{background:#9a9aa0}.tiers th.sil{background:#8a8f99}.tiers th.gold{background:#C9962B}.tiers th.rgn{background:var(--r)}
+.blank{display:inline-block;min-width:32mm;border-bottom:1px solid #999;height:1.1em;vertical-align:baseline}
+.blank.s{min-width:14mm}.blank.l{min-width:70mm}
+.box{display:inline-block;width:3.6mm;height:3.6mm;border:1.3px solid var(--r);border-radius:.7mm;vertical-align:-0.5mm;margin-right:2mm}
+.choice{display:grid;grid-template-columns:1fr 1fr;gap:2.5mm 6mm;margin:2mm 0 3mm}
+.choice div{border:1px solid var(--line);border-radius:2.5mm;padding:2.5mm 3mm;background:#fff}
+.choice small{display:block;color:var(--mute);margin-left:5.6mm}
+.note{background:var(--soft);border-left:3px solid var(--c);padding:2.5mm 4mm;margin:2mm 0 4mm;font-size:8.8pt;color:#444}
+.bind{display:inline-block;font-size:7pt;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#fff;background:var(--r);border-radius:1mm;padding:.4mm 1.6mm;margin-left:2mm;vertical-align:2px}
+.nb{display:inline-block;font-size:7pt;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--r);border:1px solid var(--r);border-radius:1mm;padding:.2mm 1.4mm;margin-left:2mm;vertical-align:2px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:6mm}
+.sig{border:1px solid var(--line);border-radius:3mm;padding:4mm 5mm;page-break-inside:avoid}
+.sig h3{margin-top:0}
+.sig .row{display:flex;align-items:flex-end;gap:2mm;margin:4.2mm 0 0}
+.sig .row span{white-space:nowrap;color:var(--mute);font-size:8.5pt;width:24mm}
+.sig .row i{flex:1;border-bottom:1px solid #999;height:1em}
+.stamp{margin-top:5mm;height:24mm;border:1.2px dashed #c9b3a9;border-radius:2mm;display:flex;align-items:center;justify-content:center;color:#b9a69d;font-size:8pt}
+.toc{columns:2;column-gap:10mm;margin:3mm 0 0;padding:0;list-style:none;font-size:9.3pt}
+.toc li{break-inside:avoid;border-bottom:1px dotted var(--line);padding:1.2mm 0}
+.toc b{color:var(--r);display:inline-block;width:10mm}
+.annex-tag{display:inline-block;background:var(--r);color:#fff;font-size:8pt;font-weight:700;letter-spacing:.14em;padding:1mm 3mm;border-radius:1mm;margin-bottom:2mm;text-transform:uppercase}
+.form td{height:9mm}
+.small{font-size:8.3pt;color:var(--mute)}
+</style>
+</head>
+<body>
+
+<!-- ================= COVER ================= -->
+<div class="cover">
+  <div class="band"></div><div class="tile"></div><div class="tile2"></div>
+  <div class="logo"><img src="logo.png" alt="Solvexo"></div>
+  <div class="kicker">Solvexo Channel Partner Programme</div>
+  <h1 class="title">Memorandum of Understanding</h1>
+  <div class="body">
+    <div class="between">Between</div>
+    <div class="party"><b>[Solvexo contracting entity]</b><span>Solvexo, a connected commerce platform · solvexo.store · powered by i9 Experts</span></div>
+    <div class="and">and</div>
+    <div class="party"><b>[Partner legal name]</b><span>[Registered address] · [City, Country]</span></div>
+    <div class="meta">
+      <div><small>MOU reference</small><b>SVX-CP-[____]</b></div>
+      <div><small>Partner tier</small><b>[Registered / Silver / Gold / Regional]</b></div>
+      <div><small>Date</small><b>[__ / __ / 20__]</b></div>
+    </div>
+  </div>
+  <div class="status"><b>DRAFT v0.1 · 22 November 2026.</b> Prepared for management, legal and Shariah review. Proposed terms, subject to management approval. Not for signature until reviewed and finalised.</div>
+  <div class="foot"><span class="tagline">Create. Sell. Manage. Grow.</span><span>Confidential · solvexo.store · sales@solvexo.store</span></div>
+</div>
+
+<!-- ================= CONTENTS ================= -->
+<section>
+  <h2>Contents</h2>
+  <ul class="toc">
+    <li><b>1</b>Parties</li><li><b>2</b>Background</li><li><b>3</b>Purpose and nature of this MOU</li><li><b>4</b>Partner tier and model</li>
+    <li><b>5</b>The four partner tiers</li><li><b>6</b>Commercial principles</li><li><b>7</b>Territory and exclusivity</li><li><b>8</b>Roles and responsibilities</li>
+    <li><b>9</b>Deal registration and attribution</li><li><b>10</b>Brand, marketing and claims</li><li><b>11</b>Ethical conduct</li><li><b>12</b>Customer protection</li>
+    <li><b>13</b>Confidentiality</li><li><b>14</b>Data protection</li><li><b>15</b>Intellectual property</li><li><b>16</b>Term, review and termination</li>
+    <li><b>17</b>Costs</li><li><b>18</b>Governing law and disputes</li><li><b>19</b>General provisions</li><li><b>20</b>Signatures</li>
+    <li><b>A</b>Annex A: Tier Schedule</li><li><b>B</b>Annex B: Partner Code of Conduct</li><li><b>C</b>Annex C: Partner Details &amp; Verification</li><li><b>D</b>Annex D: Territory &amp; Milestones</li>
+  </ul>
+  <div class="note" style="margin-top:6mm"><b>How to read this MOU.</b> Clauses marked <span class="bind">Binding</span> are legally binding from signature. All other clauses record the parties' shared intentions and are <b>not binding</b> until a definitive Partner Agreement is signed (clause 3). Blanks <span class="blank s"></span> are to be completed from the approved Commercial Schedule.</div>
+</section>
+
+<!-- ================= 1 PARTIES ================= -->
+<div class="clause">
+  <h2><span class="n">1</span>Parties</h2>
+  <p>This Memorandum of Understanding ("<b>MOU</b>") is made on <span class="blank"></span> between:</p>
+  <ol class="sub">
+    <li data-n="1.1"><b><span class="blank l"></span></b>, a company registered under the laws of <span class="blank"></span>, with its registered office at <span class="blank l"></span>, operating the Solvexo commerce platform ("<b>Solvexo</b>"); and</li>
+    <li data-n="1.2"><b><span class="blank l"></span></b>, a <span class="blank"></span> (company / firm / sole proprietor / individual) registered under the laws of <span class="blank"></span>, with its registered office at <span class="blank l"></span> ("<b>Partner</b>").</li>
+  </ol>
+  <p>Solvexo and the Partner are each a "<b>Party</b>" and together the "<b>Parties</b>".</p>
+</div>
+
+<!-- ================= 2 BACKGROUND ================= -->
+<div class="clause">
+  <h2><span class="n">2</span>Background</h2>
+  <ol class="sub">
+    <li data-n="2.1">Solvexo provides a connected commerce platform that allows sellers to build an online store, sell in person with a point of sale (POS), and manage products, inventory, orders, customers and analytics in one place (the "<b>Platform</b>").</li>
+    <li data-n="2.2">The Partner has experience, relationships and capacity in <span class="blank l"></span> and wishes to introduce, sell and/or support the Platform for sellers.</li>
+    <li data-n="2.3">The Parties wish to record the principles on which they intend to work together under the Solvexo Channel Partner Programme (the "<b>Programme</b>"), before entering into a definitive Partner Agreement.</li>
+  </ol>
+</div>
+
+<!-- ================= 3 PURPOSE ================= -->
+<div class="clause">
+  <h2><span class="n">3</span>Purpose and nature of this MOU</h2>
+  <ol class="sub">
+    <li data-n="3.1">This MOU sets out the Parties' shared understanding of the partner tier, partnership model, commercial principles and responsibilities that will form the basis of a definitive Partner Agreement and Commercial Schedule (together, the "<b>Definitive Agreement</b>").</li>
+    <li data-n="3.2">The Parties intend to negotiate in good faith and sign the Definitive Agreement within <span class="blank s"></span> days of this MOU.</li>
+    <li data-n="3.3">Except for clauses 13 (Confidentiality), 14 (Data protection), 15 (Intellectual property), 16.3–16.4, 17 (Costs), 18 (Governing law and disputes) and 19 (General provisions), which are binding, this MOU is <b>not</b> a legally binding contract and creates no obligation to enter into the Definitive Agreement.</li>
+    <li data-n="3.4">No commission, margin, exclusivity or other commercial right arises under this MOU. These arise only under the signed Definitive Agreement. Where the Parties agree in writing to begin a pilot before the Definitive Agreement is signed, the pilot terms will be recorded in a signed pilot letter.</li>
+  </ol>
+</div>
+
+<!-- ================= 4 TIER & MODEL ================= -->
+<div class="clause page">
+  <h2><span class="n">4</span>Partner tier and model</h2>
+  <p>The Parties intend that the Partner will join the Programme at the following tier <i>(tick one)</i>:</p>
+  <div class="choice">
+    <div><span class="box"></span><b>Registered Partner</b><small>Entry tier for newly approved partners</small></div>
+    <div><span class="box"></span><b>Silver Partner</b><small>Proven partners with an active seller base</small></div>
+    <div><span class="box"></span><b>Gold Partner</b><small>Full-service reseller: sales, onboarding, first-line support</small></div>
+    <div><span class="box"></span><b>Regional Partner</b><small>By invitation; conditional regional exclusivity (clause 7)</small></div>
+  </div>
+  <p>…under the following partnership model <i>(tick one)</i>:</p>
+  <div class="choice">
+    <div><span class="box"></span><b>Referral Agent</b><small>Introduces sellers; Solvexo contracts with and bills the seller</small></div>
+    <div><span class="box"></span><b>Authorised Reseller: Agency</b><small>Sells on Solvexo's behalf; Solvexo contracts with the seller</small></div>
+    <div><span class="box"></span><b>Authorised Reseller: Resale</b><small>Buys subscription rights at a wholesale price and resells them, billing sellers directly</small></div>
+    <div><span class="box"></span><b>Service Partner</b><small>Provides paid setup, design, training; software billed by Solvexo</small></div>
+  </div>
+  <div class="note">Each model is a different type of contract. The Definitive Agreement will apply only the terms for the model selected above. Software is provided as a <b>right to use a service</b>, not a transfer of ownership.</div>
+</div>
+
+<!-- ================= 5 TIERS ================= -->
+<div class="clause page">
+  <h2><span class="n">5</span>The four partner tiers</h2>
+  <p>The Programme has four tiers. Full details, including commission, are in <b>Annex A</b>.</p>
+  <table class="tiers">
+    <thead><tr><th></th><th class="reg">Registered</th><th class="sil">Silver</th><th class="gold">Gold</th><th class="rgn">Regional</th></tr></thead>
+    <tbody>
+      <tr><td>Who it's for</td><td>New partners</td><td>Proven partners</td><td>Full-service resellers</td><td>One partner per region, by invitation</td></tr>
+      <tr><td>Entry requirement</td><td>Approved application, verification, training passed</td><td>Paying sellers ≥ <span class="blank s"></span></td><td>Paying sellers ≥ <span class="blank s"></span>; first-line support; 2 certified staff</td><td>Gold status + regional milestones (Annex D)</td></tr>
+      <tr><td>Commission / margin</td><td colspan="4">As set out in <b>Annex A</b></td></tr>
+      <tr><td>Demo stores (not for resale)</td><td>1</td><td>2</td><td>5</td><td>10</td></tr>
+      <tr><td>Leads from Solvexo</td><td>—</td><td>Occasional</td><td>In territory</td><td>All regional leads</td></tr>
+      <tr><td>Marketing support</td><td>Brand kit</td><td>+ co-branded material</td><td>+ joint campaigns</td><td>+ launch events, co-funded marketing</td></tr>
+      <tr><td>Partner support</td><td>Email</td><td>Priority</td><td>Named partner manager</td><td>Partner manager + quarterly review</td></tr>
+      <tr><td>Exclusivity</td><td>No</td><td>No</td><td>No</td><td>Conditional (clause 7)</td></tr>
+    </tbody>
+  </table>
+  <ol class="sub">
+    <li data-n="5.1">Tiers are reviewed every quarter on quality as well as volume: paying sellers, seller retention, support quality and complaints.</li>
+    <li data-n="5.2">A Partner moves down a tier only after written notice and a 60-day opportunity to recover. A change of tier never reduces commission already earned.</li>
+  </ol>
+</div>
+
+<!-- ================= 6 COMMERCIAL ================= -->
+<div class="clause">
+  <h2><span class="n">6</span>Commercial principles</h2>
+  <p>The Parties intend the Definitive Agreement to reflect the following principles:</p>
+  <ol class="sub">
+    <li data-n="6.1"><b>Commission base.</b> Commission is calculated on subscription fees <b>actually received</b> by Solvexo from sellers attributed to the Partner (or, in the resale model, on the wholesale amount paid by the Partner), <b>excluding</b> sales tax/VAT, payment processing fees, refunds and chargebacks.</li>
+    <li data-n="6.2"><b>Earning event.</b> Commission is earned when the seller's payment is received, not at sign-up or during a free trial.</li>
+    <li data-n="6.3"><b>Rates.</b> The commission rate or wholesale discount for each tier is set out in Annex A and confirmed in the Commercial Schedule.</li>
+    <li data-n="6.4"><b>Statements and payment.</b> Solvexo will issue a monthly statement by the <span class="blank s"></span> day of each month and pay by the <span class="blank s"></span> day, for fees received in the previous month, in <span class="blank"></span> (currency).</li>
+    <li data-n="6.5"><b>Taxes.</b> Each Party is responsible for its own taxes. Withholding tax will be deducted where required by law and a certificate provided.</li>
+    <li data-n="6.6"><b>Refunds.</b> If a seller is refunded, only the commission on that refunded payment is adjusted, shown on the next statement with the reason.</li>
+    <li data-n="6.7"><b>No interest.</b> No interest, mark-up or percentage-based penalty will apply to any late payment by either Party.</li>
+    <li data-n="6.8"><b>Earned commission is protected.</b> Commission earned is never withheld as a penalty, cancelled retrospectively or forfeited on termination.</li>
+    <li data-n="6.9"><b>Resale pricing</b> (resale model only). Solvexo publishes a recommended price. The Partner sets its own selling price but must disclose the total price and any service fees to the seller in writing before the seller commits.</li>
+    <li data-n="6.10"><b>No guaranteed income.</b> Earnings depend entirely on genuine sales to sellers. No payment is made for recruiting other partners.</li>
+  </ol>
+</div>
+
+<!-- ================= 7 TERRITORY ================= -->
+<div class="clause">
+  <h2><span class="n">7</span>Territory and exclusivity</h2>
+  <ol class="sub">
+    <li data-n="7.1">Registered, Silver and Gold Partners are <b>non-exclusive</b>. They may operate in the territory described in Annex D.</li>
+    <li data-n="7.2">A Regional Partner may be granted <b>exclusivity</b> as Solvexo's only appointed reseller in the defined region, for a defined period, conditional on meeting the milestones in Annex D. Exclusivity normally follows a <span class="blank s"></span>-day non-exclusive pilot.</li>
+    <li data-n="7.3">Exclusivity does not prevent sellers from signing up directly with Solvexo, and does not cover the house accounts listed in Annex D.</li>
+    <li data-n="7.4">If milestones are missed, the Parties will meet and agree a 60-day improvement plan. Exclusivity (not the partnership) may end on 30 days' written notice if milestones are missed again. Sellers already signed and commission already earned remain with the Partner.</li>
+  </ol>
+</div>
+
+<!-- ================= 8 ROLES ================= -->
+<div class="clause" style="page-break-inside:avoid">
+  <h2><span class="n">8</span>Roles and responsibilities</h2>
+  <table>
+    <thead><tr><th style="width:50%">The Partner intends to</th><th>Solvexo intends to</th></tr></thead>
+    <tbody>
+      <tr><td>Find and qualify sellers in the agreed territory</td><td>Provide, host, secure and update the Platform</td></tr>
+      <tr><td>Run demonstrations on Solvexo demo stores</td><td>Provide demo stores, brand kit, training and approved claims</td></tr>
+      <tr><td>Help sellers sign up and go live</td><td>Provide second-line technical support and fix defects</td></tr>
+      <tr><td>Give first-line support (Gold and Regional)</td><td>Respond to Partner escalations promptly</td></tr>
+      <tr><td>Collect payments and issue receipts (resale model only)</td><td>Issue accurate statements and pay commission on time</td></tr>
+      <tr><td>Report complaints, refund requests and problems promptly</td><td>Process refunds according to published policy</td></tr>
+      <tr><td>Keep its sales team trained and certified</td><td>Give 30 days' notice of price or programme changes</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ================= 9 DEAL REG ================= -->
+<div class="clause">
+  <h2><span class="n">9</span>Deal registration and attribution</h2>
+  <ol class="sub">
+    <li data-n="9.1">The Partner registers prospects through Solvexo's approved system, with the prospect's permission.</li>
+    <li data-n="9.2">Solvexo accepts or rejects a registration within <span class="blank s"></span> working days, giving a reason for any rejection. An accepted registration is protected for <span class="blank s"></span> days, extendable on evidence of active progress.</li>
+    <li data-n="9.3">A sale is attributed through the Partner's link/code or accepted registration, whichever is earlier and evidenced. Where two partners worked together, the split is agreed in writing before the sale.</li>
+    <li data-n="9.4">Solvexo will not bypass an accepted registration to avoid commission. The seller always remains free to choose its supplier.</li>
+  </ol>
+</div>
+
+<!-- ================= 10 BRAND ================= -->
+<div class="clause">
+  <h2><span class="n">10</span>Brand, marketing and claims</h2>
+  <ol class="sub">
+    <li data-n="10.1">The Partner will describe itself as an "<b>Authorised Solvexo Partner</b>" and will not present itself as Solvexo, its employee, or its exclusive distributor (unless appointed Regional Partner).</li>
+    <li data-n="10.2">The Partner will use only the official Solvexo brand kit, current prices from solvexo.store, and claims on Solvexo's approved claims list.</li>
+    <li data-n="10.3">The Partner will not promise features that are not live, guaranteed sales or income, or any discount, delivery date or custom work not approved by Solvexo in writing.</li>
+    <li data-n="10.4">The Partner will not register any domain, social media account or business name containing "Solvexo".</li>
+  </ol>
+</div>
+
+<!-- ================= 11 ETHICS ================= -->
+<div class="clause">
+  <h2><span class="n">11</span>Ethical conduct</h2>
+  <ol class="sub">
+    <li data-n="11.1">Both Parties will act honestly, fulfil their commitments, and avoid deception, bribery, interest-based charges and unclear terms, in line with the Partner Code of Conduct in <b>Annex B</b>.</li>
+    <li data-n="11.2">Both Parties will comply with all applicable laws, including those on advertising, consumer protection, competition, tax, anti-corruption, electronic transactions and data protection.</li>
+    <li data-n="11.3">The Partner will not appoint sub-agents without Solvexo's written approval. Any approved sub-agent must follow the same obligations.</li>
+    <li data-n="11.4">Neither Party will describe this arrangement as "Shariah-certified" or "Shariah-compliant" unless a qualified Shariah reviewer has issued a written opinion on the final agreement.</li>
+  </ol>
+</div>
+
+<!-- ================= 12 CUSTOMER ================= -->
+<div class="clause">
+  <h2><span class="n">12</span>Customer protection</h2>
+  <ol class="sub">
+    <li data-n="12.1">Before a seller commits, the Partner will give the seller, in writing: the plan, features, total monthly price, renewal terms, free-trial terms, cancellation rights and who provides support.</li>
+    <li data-n="12.2">Refund requests are passed to Solvexo promptly. The Partner will never discourage a legitimate complaint, cancellation or refund.</li>
+    <li data-n="12.3">If the partnership ends, sellers keep their stores and data and are transitioned to Solvexo or another partner without interruption.</li>
+  </ol>
+</div>
+
+<!-- ================= 13-15 BINDING ================= -->
+<div class="clause">
+  <h2><span class="n">13</span>Confidentiality <span class="bind">Binding</span></h2>
+  <ol class="sub">
+    <li data-n="13.1">Each Party will keep confidential all non-public information received from the other, including pricing, commercial terms, roadmap, seller lists and business plans, and use it only for the purpose of this MOU.</li>
+    <li data-n="13.2">This does not apply to information that is public through no fault of the receiving Party, already lawfully known to it, or required to be disclosed by law (with prompt notice where lawful).</li>
+    <li data-n="13.3">This clause survives for 2 years after this MOU ends.</li>
+  </ol>
+</div>
+<div class="clause">
+  <h2><span class="n">14</span>Data protection <span class="bind">Binding</span></h2>
+  <ol class="sub">
+    <li data-n="14.1">Each seller's store data belongs to that seller. The Partner will access a seller's store only with the seller's written permission, and only as needed to support them.</li>
+    <li data-n="14.2">Personal data will be used only for the Programme, kept secure, never sold, and never entered into public AI tools.</li>
+    <li data-n="14.3">Each Party will notify the other of any data incident affecting the other's data within 24 hours of becoming aware of it.</li>
+  </ol>
+</div>
+<div class="clause">
+  <h2><span class="n">15</span>Intellectual property <span class="bind">Binding</span></h2>
+  <ol class="sub">
+    <li data-n="15.1">Solvexo owns all rights in the Platform, the Solvexo name, logo and materials. The Partner receives a limited, revocable, non-transferable right to use the brand kit solely to promote the Platform during the Programme.</li>
+    <li data-n="15.2">The Partner owns its own name, brand and materials. Nothing in this MOU transfers ownership of either Party's intellectual property.</li>
+  </ol>
+</div>
+
+<!-- ================= 16-19 ================= -->
+<div class="clause page">
+  <h2><span class="n">16</span>Term, review and termination</h2>
+  <ol class="sub">
+    <li data-n="16.1">This MOU starts on the date of the last signature and continues until the earlier of: (a) signature of the Definitive Agreement; or (b) <span class="blank s"></span> months from that date.</li>
+    <li data-n="16.2">The Parties will review progress together within <span class="blank s"></span> days of signature.</li>
+    <li data-n="16.3">Either Party may end this MOU by 30 days' written notice, without liability, except for breach of a binding clause.</li>
+    <li data-n="16.4">On expiry or termination, each Party will return or destroy the other's confidential information on request, and the Partner will stop using the Solvexo brand. Binding clauses survive as stated.</li>
+  </ol>
+</div>
+<div class="clause">
+  <h2><span class="n">17</span>Costs <span class="bind">Binding</span></h2>
+  <p>Each Party bears its own costs in connection with this MOU and the negotiation of the Definitive Agreement. No fee is payable by the Partner to join the Programme.</p>
+</div>
+<div class="clause">
+  <h2><span class="n">18</span>Governing law and disputes <span class="bind">Binding</span></h2>
+  <ol class="sub">
+    <li data-n="18.1">This MOU is governed by the laws of <span class="blank"></span>.</li>
+    <li data-n="18.2">The Parties will first try to resolve any dispute through good-faith discussion between named contacts (14 days), then between senior management (a further 14 days), then by mediation.</li>
+    <li data-n="18.3">If unresolved, the dispute will be referred to arbitration seated in <span class="blank"></span>, before a sole arbitrator agreed by the Parties, under the applicable arbitration law. Liability is limited to proven direct loss. No arbitrary fines or penalties apply.</li>
+  </ol>
+</div>
+<div class="clause">
+  <h2><span class="n">19</span>General provisions <span class="bind">Binding</span></h2>
+  <ol class="sub">
+    <li data-n="19.1"><b>Relationship.</b> Nothing in this MOU creates a partnership in law, joint venture, employment or agency, or authorises either Party to bind the other.</li>
+    <li data-n="19.2"><b>Entire understanding.</b> This MOU, with its Annexes, is the Parties' entire understanding on its subject and replaces any earlier verbal or written discussions.</li>
+    <li data-n="19.3"><b>Changes.</b> Any change must be in writing and signed by both Parties.</li>
+    <li data-n="19.4"><b>Notices.</b> Notices are given in writing to the addresses in clause 1, or by email to the contacts in Annex C.</li>
+    <li data-n="19.5"><b>Counterparts and e-signature.</b> This MOU may be signed in counterparts and electronically, each of which is an original.</li>
+  </ol>
+</div>
+
+<!-- ================= 20 SIGNATURES ================= -->
+<div class="clause page">
+  <h2><span class="n">20</span>Signatures</h2>
+  <p>Signed by the authorised representatives of the Parties on the dates below.</p>
+  <div class="two">
+    <div class="sig"><h3>For and on behalf of Solvexo</h3>
+      <div class="row"><span>Signature</span><i></i></div><div class="row"><span>Name</span><i></i></div><div class="row"><span>Designation</span><i></i></div><div class="row"><span>Date</span><i></i></div>
+      <div class="stamp">Company stamp</div></div>
+    <div class="sig"><h3>For and on behalf of the Partner</h3>
+      <div class="row"><span>Signature</span><i></i></div><div class="row"><span>Name</span><i></i></div><div class="row"><span>Designation</span><i></i></div><div class="row"><span>Date</span><i></i></div>
+      <div class="stamp">Company stamp</div></div>
+  </div>
+  <h3 style="margin-top:8mm">Witnesses</h3>
+  <div class="two">
+    <div class="sig"><div class="row"><span>1. Signature</span><i></i></div><div class="row"><span>Name</span><i></i></div><div class="row"><span>CNIC / ID</span><i></i></div><div class="row"><span>Address</span><i></i></div></div>
+    <div class="sig"><div class="row"><span>2. Signature</span><i></i></div><div class="row"><span>Name</span><i></i></div><div class="row"><span>CNIC / ID</span><i></i></div><div class="row"><span>Address</span><i></i></div></div>
+  </div>
+</div>
+
+<!-- ================= ANNEX A ================= -->
+<div class="page">
+  <div class="annex-tag">Annex A</div>
+  <h2>Tier Schedule</h2>
+  <p class="lead">Commission and benefits by tier. Values shown as blanks are to be completed from the Commercial Schedule approved by Solvexo management.</p>
+  <table class="tiers">
+    <thead><tr><th style="width:28%"></th><th class="reg">Registered</th><th class="sil">Silver</th><th class="gold">Gold</th><th class="rgn">Regional</th></tr></thead>
+    <tbody>
+      <tr><td>Commission (% of commission base, clause 6.1)</td><td><span class="blank s"></span>%</td><td><span class="blank s"></span>%</td><td><b>40%</b></td><td><b>40%</b></td></tr>
+      <tr><td>Commission duration per seller</td><td colspan="4"><span class="blank l"></span></td></tr>
+      <tr><td>Activation bonus per seller (if any)</td><td><span class="blank s"></span></td><td><span class="blank s"></span></td><td><span class="blank s"></span></td><td><span class="blank s"></span></td></tr>
+      <tr><td>Minimum paying sellers to qualify</td><td>—</td><td><span class="blank s"></span></td><td><span class="blank s"></span></td><td>As Annex D</td></tr>
+      <tr><td>First-line support required</td><td>No</td><td>No</td><td>Yes</td><td>Yes</td></tr>
+      <tr><td>Certified sales staff</td><td>1</td><td>1</td><td>2</td><td>3</td></tr>
+      <tr><td>Demo stores (not for resale)</td><td>1</td><td>2</td><td>5</td><td>10</td></tr>
+      <tr><td>Co-funded marketing</td><td>—</td><td>—</td><td>Case by case</td><td><span class="blank s"></span> per quarter</td></tr>
+      <tr><td>Partner manager</td><td>—</td><td>—</td><td>Named</td><td>Named + quarterly review</td></tr>
+      <tr><td>Exclusivity</td><td>No</td><td>No</td><td>No</td><td>Conditional</td></tr>
+    </tbody>
+  </table>
+  <h3>Worked example (illustration only, not a forecast or guarantee)</h3>
+  <table>
+    <thead><tr><th>Step</th><th>Calculation</th><th>Amount</th></tr></thead>
+    <tbody>
+      <tr><td>Fees received</td><td>100 sellers × US$29 (Grow plan, current published launch price)</td><td>US$2,900 a month</td></tr>
+      <tr><td>Gross commission at 40%</td><td>US$2,900 × 40%</td><td><b>US$1,160 a month</b></td></tr>
+      <tr><td>Partner's own costs</td><td>Staff, travel, office (Partner's own figures)</td><td>[Partner to estimate]</td></tr>
+      <tr><td>Partner's net earnings</td><td>Gross commission − Partner's costs</td><td>[Result]</td></tr>
+    </tbody>
+  </table>
+  <p class="small">Published prices are on solvexo.store and may change with 30 days' notice. PKR equivalents use the exchange-rate source and date stated in the Commercial Schedule.</p>
+</div>
+
+<!-- ================= ANNEX B ================= -->
+<div class="page">
+  <div class="annex-tag">Annex B</div>
+  <h2>Partner Code of Conduct</h2>
+  <div class="two">
+    <div><h3>Always</h3><ul>
+      <li>Use only approved claims and current published prices</li>
+      <li>Give sellers the full offer in writing before they commit</li>
+      <li>Identify yourself as an Authorised Solvexo Partner</li>
+      <li>Recommend the plan that fits the seller's needs</li>
+      <li>Protect sellers' money, data and passwords</li>
+      <li>Pass on complaints and refund requests promptly</li>
+      <li>Keep accurate records of sales and collections</li>
+    </ul></div>
+    <div><h3>Never</h3><ul>
+      <li>Promise sales, income, growth or unreleased features</li>
+      <li>Use fake reviews, fake urgency or misleading comparisons</li>
+      <li>Offer or accept bribes, kickbacks or secret payments</li>
+      <li>Use religious sentiment to pressure a buyer</li>
+      <li>Send bulk messages or use purchased contact lists</li>
+      <li>Discourage a cancellation, complaint or refund</li>
+      <li>Onboard sellers of goods that are illegal or clearly impermissible</li>
+    </ul></div>
+  </div>
+  <h3>Principles behind this Code</h3>
+  <table>
+    <thead><tr><th style="width:30%">Principle</th><th style="width:30%">Reference</th><th>How it applies</th></tr></thead>
+    <tbody>
+      <tr><td>Fulfil commitments</td><td>Qur'an 5:1</td><td>Written terms; earned commission always paid</td></tr>
+      <tr><td>Trade by mutual consent, no unjust gain</td><td>Qur'an 4:29</td><td>Clear commission base; full price disclosed to sellers</td></tr>
+      <tr><td>No interest (<i>riba</i>)</td><td>Qur'an 2:275</td><td>No interest or percentage penalties on late payments</td></tr>
+      <tr><td>No excessive uncertainty (<i>gharar</i>)</td><td>Sahih Muslim 1513</td><td>All amounts, dates and conditions defined in writing</td></tr>
+      <tr><td>No deception</td><td>Sahih Muslim 102</td><td>Approved claims only; no fake urgency or reviews</td></tr>
+      <tr><td>No bribery (<i>rishwah</i>)</td><td>Sunan Abi Dawud 3580</td><td>No kickbacks or secret payments</td></tr>
+      <tr><td>Pay what is earned on time</td><td>Sunan Ibn Majah 2443</td><td>Fixed monthly payment date</td></tr>
+      <tr><td>Trust (<i>amanah</i>)</td><td>Qur'an 4:58</td><td>Sellers' funds and data protected</td></tr>
+    </tbody>
+  </table>
+  <p class="small">This Code reflects ethical principles the Parties have chosen to follow. It is not a Shariah certification. The final agreement should be reviewed by a qualified Shariah scholar and a lawyer.</p>
+</div>
+
+<!-- ================= ANNEX C ================= -->
+<div class="page">
+  <div class="annex-tag">Annex C</div>
+  <h2>Partner Details &amp; Verification</h2>
+  <table class="form">
+    <tbody>
+      <tr><td class="k">Legal name</td><td></td></tr>
+      <tr><td class="k">Business type</td><td>☐ Private limited company &nbsp; ☐ Partnership &nbsp; ☐ Sole proprietor &nbsp; ☐ Individual</td></tr>
+      <tr><td class="k">Registration no. (SECP / other)</td><td></td></tr>
+      <tr><td class="k">NTN / tax registration</td><td></td></tr>
+      <tr><td class="k">Registered address</td><td></td></tr>
+      <tr><td class="k">Authorised signatory &amp; designation</td><td></td></tr>
+      <tr><td class="k">Primary contact (name, email, phone)</td><td></td></tr>
+      <tr><td class="k">Finance contact (name, email)</td><td></td></tr>
+      <tr><td class="k">Bank account (title, bank, IBAN)</td><td></td></tr>
+      <tr><td class="k">Sales team size / support team size</td><td></td></tr>
+      <tr><td class="k">Existing partnerships relevant to this Programme</td><td></td></tr>
+    </tbody>
+  </table>
+  <h3>Documents to attach</h3>
+  <table>
+    <thead><tr><th style="width:8%">✓</th><th>Document</th><th style="width:30%">Required for</th></tr></thead>
+    <tbody>
+      <tr><td>☐</td><td>Certificate of incorporation / business registration</td><td>All business partners</td></tr>
+      <tr><td>☐</td><td>NTN certificate and sales-tax registration (where applicable)</td><td>All business partners</td></tr>
+      <tr><td>☐</td><td>CNIC copies of owners and authorised signatory</td><td>All partners</td></tr>
+      <tr><td>☐</td><td>Board resolution or authority letter for the signatory</td><td>Companies</td></tr>
+      <tr><td>☐</td><td>Bank account confirmation in the Partner's name</td><td>All partners</td></tr>
+      <tr><td>☐</td><td>Two business references</td><td>Silver and above</td></tr>
+      <tr><td>☐</td><td>Proof of any claimed partnerships or certifications</td><td>Where claimed</td></tr>
+      <tr><td>☐</td><td>90-day territory business plan</td><td>Gold and Regional</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ================= ANNEX D ================= -->
+<div class="page">
+  <div class="annex-tag">Annex D</div>
+  <h2>Territory &amp; Milestones</h2>
+  <table class="form">
+    <tbody>
+      <tr><td class="k">Territory</td><td>[e.g. Lahore District, Punjab, Pakistan]</td></tr>
+      <tr><td class="k">Customer segments</td><td>[e.g. retail shops, social sellers, wholesalers/importers]</td></tr>
+      <tr><td class="k">Permitted channels</td><td>[e.g. field sales, online, events]</td></tr>
+      <tr><td class="k">Exclusivity</td><td>☐ Non-exclusive &nbsp; ☐ Exclusive (Regional Partner only), from <span class="blank s"></span> to <span class="blank s"></span></td></tr>
+      <tr><td class="k">House accounts excluded</td><td></td></tr>
+      <tr><td class="k">Pilot period</td><td><span class="blank s"></span> days, from <span class="blank s"></span></td></tr>
+    </tbody>
+  </table>
+  <h3>Milestones</h3>
+  <table class="form">
+    <thead><tr><th>Period</th><th>Paying sellers</th><th>Stores live (5+ products)</th><th>Seller retention after 3 months</th><th>Complaint rate</th></tr></thead>
+    <tbody>
+      <tr><td>Pilot</td><td></td><td></td><td>—</td><td></td></tr>
+      <tr><td>Quarter 1</td><td></td><td></td><td></td><td></td></tr>
+      <tr><td>Quarter 2</td><td></td><td></td><td></td><td></td></tr>
+      <tr><td>Quarter 3</td><td></td><td></td><td></td><td></td></tr>
+      <tr><td>Quarter 4</td><td></td><td></td><td></td><td></td></tr>
+    </tbody>
+  </table>
+  <p class="small">Milestones are agreed jointly, reviewed quarterly, and measure quality as well as volume. Missing a milestone triggers the improvement process in clause 7.4, never a fine.</p>
+  <div class="two" style="margin-top:10mm">
+    <div class="sig"><div class="row"><span>Solvexo initials</span><i></i></div></div>
+    <div class="sig"><div class="row"><span>Partner initials</span><i></i></div></div>
+  </div>
+</div>
+
+</body>
+</html>
