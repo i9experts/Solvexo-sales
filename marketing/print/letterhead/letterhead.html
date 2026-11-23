@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Solvexo Letterhead</title>
+<style>
+@font-face{font-family:Poppins;font-weight:400;src:url(../tent-card/fonts/poppins-latin-400-normal.woff2)}
+@font-face{font-family:Poppins;font-weight:600;src:url(../tent-card/fonts/poppins-latin-600-normal.woff2)}
+@font-face{font-family:Poppins;font-weight:700;src:url(../tent-card/fonts/poppins-latin-700-normal.woff2)}
+:root{--t:#D97757;--c:#F59373;--r:#B85C3E;--ink:#1F1A17;--mute:#5E534D;--line:#EAD9CF}
+/* A4 210 x 297 mm + 3 mm bleed = 216 x 303 mm. Writing area: 22 mm left/right, 48 mm top (page 1), 30 mm bottom. */
+@page{size:216mm 303mm;margin:0}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Poppins,sans-serif;color:var(--ink);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.page{width:216mm;height:303mm;position:relative;overflow:hidden;background:#fff;page-break-after:always}
+.corner{position:absolute;right:-26mm;top:-40mm;width:56mm;height:52mm;border-radius:14mm;background:var(--c);opacity:.35}
+.corner2{display:none}
+.logo{position:absolute;left:25mm;top:20mm;height:12mm}
+.contact{position:absolute;right:25mm;top:19.5mm;text-align:right;font-size:7pt;line-height:1.6;color:var(--mute)}
+.contact b{color:var(--ink);font-weight:700;font-size:7.6pt}
+.contact span{color:var(--r);font-weight:600}
+.rule{position:absolute;left:25mm;right:25mm;top:41mm;height:.6mm;background:var(--t)}
+.rule::after{content:"";position:absolute;left:0;top:0;width:34mm;height:.6mm;background:var(--ink)}
+.foot{position:absolute;left:25mm;right:25mm;bottom:14mm;display:flex;justify-content:space-between;align-items:flex-end;font-size:6.4pt;color:var(--mute);line-height:1.5;border-top:.25mm solid var(--line);padding-top:2.4mm}
+.foot b{color:var(--t);font-weight:700}
+.band{position:absolute;left:0;right:0;bottom:0;height:7mm;background:var(--t)}
+.band::after{content:"";position:absolute;left:0;top:0;width:58mm;height:7mm;background:var(--ink)}
+/* continuation page */
+.icon{position:absolute;left:25mm;top:16mm;height:9mm}
+.cont{position:absolute;right:25mm;top:18.6mm;font-size:6.6pt;color:var(--mute);letter-spacing:.08em}
+.rule2{position:absolute;left:25mm;right:25mm;top:29mm;height:.35mm;background:var(--line)}
+/* guide (preview only) */
+.guide{position:absolute;left:25mm;right:25mm;top:51mm;bottom:33mm;border:.3mm dashed #E2D4CB;display:none}
+.showguide .guide{display:block}
+</style></head>
+<body>
+
+<div class="page">
+  <div class="corner"></div><div class="corner2"></div>
+  <img class="logo" src="logo.png" alt="Solvexo">
+  <div class="contact">
+    <b>[Company legal name]</b><br>
+    [Street address], [Area], Karachi, Pakistan<br>
+    [+92 XX XXXX XXXX] · <span>sales@solvexo.store</span><br>
+    <span>solvexo.store</span>
+  </div>
+  <div class="rule"></div>
+  <div class="guide"></div>
+  <div class="foot">
+    <span><b>Solvexo</b> · Create. Sell. Manage. Grow. · Powered by i9 Experts</span>
+    <span style="text-align:right">NTN [_______] · Registered office: [address]</span>
+  </div>
+  <div class="band"></div>
+</div>
+
+<div class="page">
+  <img class="icon" src="icon.png" alt="Solvexo">
+  <p class="cont">SOLVEXO · CONTINUED</p>
+  <div class="rule2"></div>
+  <div class="foot">
+    <span><b>Solvexo</b> · solvexo.store · sales@solvexo.store</span>
+    <span>[Company legal name]</span>
+  </div>
+  <div class="band"></div>
+</div>
+
+</body></html>
