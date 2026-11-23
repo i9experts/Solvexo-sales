@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Solvexo Partner Folder</title>
+<style>
+@font-face{font-family:Poppins;font-weight:400;src:url(../tent-card/fonts/poppins-latin-400-normal.woff2)}
+@font-face{font-family:Poppins;font-weight:600;src:url(../tent-card/fonts/poppins-latin-600-normal.woff2)}
+@font-face{font-family:Poppins;font-weight:700;src:url(../tent-card/fonts/poppins-latin-700-normal.woff2)}
+@font-face{font-family:Poppins;font-weight:800;src:url(../tent-card/fonts/poppins-latin-800-normal.woff2)}
+@font-face{font-family:Nastaliq;font-weight:400;src:url(../tent-card/fonts/noto-nastaliq-urdu-arabic-400-normal.woff2)}
+:root{--t:#D97757;--c:#F59373;--r:#B85C3E;--ink:#1F1A17;--paper:#FFFDFB;--sand:#F7ECE5;--mute:#5E534D;--line:#EAD9CF}
+/* Panels: 220 x 310 mm each (holds A4). Spine 5 mm. Bleed 3 mm on every outer edge.
+   Outside spread = back | spine | front = 445 x 310 (+6) = 451 x 316 mm
+   Inside spread  = inside-left | spine | inside-right = 451 x 316 mm
+   Pocket face    = 220 x 100 (+6) = 226 x 106 mm (glues to the inside-right panel) */
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Poppins,sans-serif;color:var(--ink);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.sheet{position:relative;overflow:hidden}
+.spread{width:451mm;height:316mm}
+.pocketsheet{width:226mm;height:106mm}
+.panel{position:absolute;top:0;height:316mm;overflow:hidden}
+.ur{font-family:Nastaliq,serif;direction:rtl;unicode-bidi:isolate}
+
+/* ---------- OUTSIDE ---------- */
+.out .back{left:0;width:223mm;background:var(--ink);color:#fff}
+.out .spine{left:223mm;width:5mm;background:var(--r);display:flex;align-items:center;justify-content:center}
+.out .spine span{writing-mode:vertical-rl;transform:rotate(180deg);font-weight:700;font-size:6pt;letter-spacing:.24em;color:#fff;white-space:nowrap}
+.out .front{left:228mm;width:223mm;background:var(--t)}
+.front .d1{position:absolute;right:-60mm;top:-50mm;width:190mm;height:190mm;border-radius:40mm;background:var(--c);opacity:.55}
+.front .d2{position:absolute;right:40mm;top:150mm;width:40mm;height:40mm;border-radius:10mm;background:#fff;opacity:.16}
+.front .d3{position:absolute;left:-30mm;bottom:-40mm;width:120mm;height:120mm;border-radius:28mm;background:var(--r);opacity:.45}
+.front .logo{position:absolute;left:20mm;top:24mm;background:#fff;border-radius:3.6mm;padding:3mm 5mm}
+.front .logo img{height:13mm;display:block}
+.front .k{position:absolute;left:20mm;top:188mm;font-weight:700;font-size:9pt;letter-spacing:.24em;color:var(--ink)}
+.front h1{position:absolute;left:20mm;top:196mm;width:170mm;font-weight:800;font-size:40pt;line-height:1.0;letter-spacing:-.02em;color:#fff}
+.front .sub{position:absolute;left:20mm;top:250mm;width:150mm;font-size:12pt;line-height:1.4;color:var(--ink);font-weight:600}
+.front .tag{position:absolute;left:20mm;bottom:20mm;font-weight:700;font-size:9pt;letter-spacing:.06em;color:#fff}
+.back .logo{position:absolute;left:23mm;top:24mm;height:10mm}
+.back .msg{position:absolute;left:23mm;top:120mm;width:160mm}
+.back .msg p.big{font-weight:800;font-size:26pt;line-height:1.05;letter-spacing:-.015em}
+.back .msg p.big span{color:var(--c)}
+.back .msg p.s{font-size:10pt;line-height:1.5;color:#E3D5CC;margin-top:6mm;width:140mm}
+.back .msg .ur{font-size:13pt;line-height:2;color:#E3D5CC;margin-top:4mm;text-align:left}
+.back .contact{position:absolute;left:23mm;right:20mm;bottom:22mm;display:flex;justify-content:space-between;align-items:flex-end;border-top:.4mm solid #3D332D;padding-top:6mm}
+.back .contact p{font-size:9pt;line-height:1.7;color:#E3D5CC}
+.back .contact p b{color:#fff;font-weight:700}
+.back .qr{background:#fff;border-radius:2.4mm;padding:2.4mm;text-align:center}
+.back .qr img{width:24mm;height:24mm;display:block}
+.back .qr span{display:block;font-weight:700;font-size:5.6pt;letter-spacing:.12em;color:var(--r);margin-top:1mm}
+
+/* ---------- INSIDE ---------- */
+.in .left{left:0;width:223mm;background:var(--paper)}
+.in .spine{left:223mm;width:5mm;background:var(--sand)}
+.in .right{left:228mm;width:223mm;background:var(--sand)}
+.in .left .wrap{position:absolute;left:23mm;right:18mm;top:24mm;bottom:20mm;display:flex;flex-direction:column}
+.k2{font-weight:700;font-size:8pt;letter-spacing:.22em;color:var(--r)}
+.h2{font-weight:800;font-size:24pt;line-height:1.05;letter-spacing:-.015em;margin-top:2mm}
+.h2 span{color:var(--t)}
+.p{font-size:9.6pt;line-height:1.6;color:var(--mute);margin-top:5mm}
+.inside-list{margin-top:8mm;display:flex;flex-direction:column;gap:3mm}
+.inside-list div{display:flex;gap:4mm;align-items:center;background:#fff;border:.35mm solid var(--line);border-radius:3mm;padding:3.4mm 4mm;font-size:9.4pt}
+.inside-list b{font-weight:700}
+.inside-list i{width:9mm;height:9mm;border-radius:2.4mm;background:var(--sand);display:flex;align-items:center;justify-content:center;flex:none}
+.vals{margin-top:9mm;display:grid;grid-template-columns:1fr 1fr;gap:3mm}
+.vals div{background:var(--ink);color:#fff;border-radius:3mm;padding:3.4mm 4mm;font-size:8.4pt;line-height:1.4}
+.vals b{display:block;color:var(--c);font-size:9pt;margin-bottom:.6mm}
+.in .right .wrap{position:absolute;left:20mm;right:23mm;top:24mm}
+.tiers{display:grid;grid-template-columns:repeat(4,1fr);gap:3mm;margin-top:7mm}
+.tier{background:#fff;border-radius:3mm;padding:4mm 3.6mm;border-top:2mm solid var(--line)}
+.tier b{display:block;font-weight:800;font-size:10.4pt}
+.tier span{display:block;font-size:7.8pt;line-height:1.45;color:var(--mute);margin-top:1.4mm}
+.tier.reg{border-top-color:#9A9AA0}.tier.sil{border-top-color:#8A8F99}.tier.gold{border-top-color:#C9962B}.tier.rgn{border-top-color:var(--r)}
+.path{display:flex;align-items:stretch;margin-top:8mm}
+.path .st{flex:1;background:#fff;border-radius:3mm;padding:3.6mm}
+.path .st .n{width:7mm;height:7mm;border-radius:50%;background:var(--t);color:#fff;font-weight:700;font-size:9pt;display:flex;align-items:center;justify-content:center}
+.path .st b{display:block;font-size:9pt;margin-top:2mm}
+.path .st span{display:block;font-size:7.6pt;line-height:1.4;color:var(--mute);margin-top:.8mm}
+.path .ar{width:7mm;display:flex;align-items:center;justify-content:center}
+.pocketzone{position:absolute;left:0;right:0;bottom:0;height:103mm;border-top:.3mm dashed #C9B3A9}
+.pocketzone span{position:absolute;right:23mm;top:2mm;font-size:6pt;color:#B9A69D;letter-spacing:.08em}
+
+/* ---------- POCKET ---------- */
+.pocket{position:absolute;inset:0;background:var(--ink);color:#fff;overflow:hidden}
+.pocket .d{position:absolute;right:-24mm;top:-40mm;width:90mm;height:90mm;border-radius:20mm;background:var(--t);opacity:.9}
+.pocket .logo{position:absolute;left:23mm;top:20mm;height:9mm;background:#fff;border-radius:2mm;padding:1.6mm 2.6mm;box-sizing:content-box}
+.pocket .t{position:absolute;left:23mm;top:42mm;font-weight:800;font-size:18pt;line-height:1.1}
+.pocket .t span{color:var(--c)}
+.pocket .s{position:absolute;left:23mm;top:62mm;font-size:8.6pt;color:#E3D5CC;width:86mm;line-height:1.5}
+.slot{position:absolute;right:16mm;top:40mm;width:92mm;height:54mm;border:.4mm dashed rgba(255,255,255,.5);border-radius:2mm;display:flex;align-items:center;justify-content:center;font-size:6.4pt;letter-spacing:.1em;color:rgba(255,255,255,.65)}
+.pc{margin-top:auto;border:.4mm dashed #C9B3A9;border-radius:3mm;padding:4mm 5mm}
+.pc h4{font-size:9.4pt;font-weight:700;color:var(--r)}
+.pc .l{display:flex;gap:3mm;align-items:flex-end;font-size:8.6pt;color:var(--mute);margin-top:5mm}
+.pc .l i{flex:1;border-bottom:.35mm solid #B9A69D;height:4mm}
+svg{display:block}
+</style></head>
+<body>
+
+<!-- ===================== OUTSIDE SPREAD ===================== -->
+<div class="sheet spread out" id="outside">
+  <div class="panel back">
+    <img class="logo" src="logo-light.png" alt="Solvexo">
+    <div class="msg">
+      <p class="big">One connected commerce platform. <span>Built to grow with partners.</span></p>
+      <p class="s">Online store, point of sale, inventory, orders and analytics in one system, for sellers, creators and educators.</p>
+      <p class="ur">دکان، آن لائن اسٹور اور اسٹاک — سب ایک ہی ایپ میں۔</p>
+    </div>
+    <div class="contact">
+      <p><b>Solvexo Channel Partner Programme</b><br>sales@solvexo.store · solvexo.store<br>Powered by i9 Experts</p>
+      <div class="qr"><img src="qr.svg" alt="QR to solvexo.store"><span>SOLVEXO.STORE</span></div>
+    </div>
+  </div>
+  <div class="panel spine"><span>SOLVEXO · CHANNEL PARTNER PROGRAMME</span></div>
+  <div class="panel front">
+    <div class="d1"></div><div class="d2"></div><div class="d3"></div>
+    <div class="logo"><img src="logo.png" alt="Solvexo"></div>
+    <p class="k">CHANNEL PARTNER PROGRAMME</p>
+    <h1>Grow commerce in your city, together.</h1>
+    <p class="sub">Partnership pack</p>
+    <p class="tag">CREATE · SELL · MANAGE · GROW</p>
+  </div>
+</div>
+
+<!-- ===================== INSIDE SPREAD ===================== -->
+<div class="sheet spread in" id="inside">
+  <div class="panel left"><div class="wrap">
+    <p class="k2">WELCOME</p>
+    <h2 class="h2">Thank you for meeting <span>Solvexo.</span></h2>
+    <p class="p">This pack explains how a partnership with Solvexo works: what we offer sellers, how partners earn, and how we work together. Every term is set out in writing before anything is signed.</p>
+    <div class="inside-list">
+      <div><i><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#B85C3E" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6M8 13h8M8 17h5"/></svg></i><span><b>Memorandum of Understanding</b> · the partnership in writing</span></div>
+      <div><i><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#B85C3E" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19V9M10 19V5M16 19v-7M22 19H2"/></svg></i><span><b>Channel Partner Programme</b> · tiers, commission rules, territory</span></div>
+      <div><i><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#B85C3E" stroke-width="2.2" stroke-linecap="round"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8"/></svg></i><span><b>Sales sheet &amp; flyer</b> · what sellers get and what it costs</span></div>
+      <div><i><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#B85C3E" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="4"/><path d="M4 21c1.5-4 4.5-6 8-6s6.5 2 8 6"/></svg></i><span><b>Your Solvexo contact</b> · business card in the pocket</span></div>
+    </div>
+    <div class="vals">
+      <div><b>Everything in writing</b>Clear amounts, dates and conditions.</div>
+      <div><b>Paid on time</b>A fixed monthly date. Earned commission is always paid.</div>
+      <div><b>No interest, no penalties</b>Late payments never carry interest or percentage fines.</div>
+      <div><b>Honest selling</b>Approved claims only. No guaranteed results.</div>
+    </div>
+    <div class="pc"><h4>Your Solvexo partnership contact</h4><div class="l"><span>Name</span><i></i></div><div class="l"><span>WhatsApp</span><i></i></div><div class="l"><span>Next meeting</span><i></i></div></div>
+  </div></div>
+  <div class="panel spine"></div>
+  <div class="panel right">
+    <div class="wrap">
+      <p class="k2">HOW THE PARTNERSHIP WORKS</p>
+      <h2 class="h2">Four tiers that <span>grow with you.</span></h2>
+      <div class="tiers">
+        <div class="tier reg"><b>Registered</b><span>New partners, after verification and training</span></div>
+        <div class="tier sil"><b>Silver</b><span>Proven partners with an active seller base</span></div>
+        <div class="tier gold"><b>Gold</b><span>Full-service resellers: sales, onboarding, first-line support</span></div>
+        <div class="tier rgn"><b>Regional</b><span>One partner per region, by invitation, on milestones</span></div>
+      </div>
+      <div class="path">
+        <div class="st"><span class="n">1</span><b>Meet</b><span>Demo and the partnership pack</span></div>
+        <div class="ar"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#D97757" stroke-width="3" stroke-linecap="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg></div>
+        <div class="st"><span class="n">2</span><b>Agree</b><span>MOU, then the Partner Agreement</span></div>
+        <div class="ar"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#D97757" stroke-width="3" stroke-linecap="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg></div>
+        <div class="st"><span class="n">3</span><b>Pilot</b><span>90 days, with training and demo stores</span></div>
+        <div class="ar"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#D97757" stroke-width="3" stroke-linecap="round"><path d="M5 12h13M13 6l6 6-6 6"/></svg></div>
+        <div class="st"><span class="n">4</span><b>Grow</b><span>Review, next tier, your region</span></div>
+      </div>
+    </div>
+    <div class="pocketzone"><span>POCKET AREA · covered by the pocket</span></div>
+  </div>
+</div>
+
+<!-- ===================== POCKET ===================== -->
+<div class="sheet pocketsheet" id="pocket">
+  <div class="pocket">
+    <div class="d"></div>
+    <img class="logo" src="logo.png" alt="Solvexo">
+    <p class="t">Your partnership <span>pack</span></p>
+    <p class="s">MOU · Partner Programme · Sales materials. Proposed terms, subject to the signed agreement.</p>
+    <div class="slot">BUSINESS CARD SLOT · die-cut guide, do not print</div>
+  </div>
+</div>
+
+</body></html>
