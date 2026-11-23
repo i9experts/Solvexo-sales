@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Solvexo Rep ID Card</title>
+<style>
+@font-face{font-family:Poppins;font-weight:400;src:url(FONTS/poppins-latin-400-normal.woff2)}
+@font-face{font-family:Poppins;font-weight:600;src:url(FONTS/poppins-latin-600-normal.woff2)}
+@font-face{font-family:Poppins;font-weight:700;src:url(FONTS/poppins-latin-700-normal.woff2)}
+@font-face{font-family:Poppins;font-weight:800;src:url(FONTS/poppins-latin-800-normal.woff2)}
+@font-face{font-family:Nastaliq;font-weight:400;src:url(FONTS/noto-nastaliq-urdu-arabic-400-normal.woff2)}
+@font-face{font-family:Nastaliq;font-weight:700;src:url(FONTS/noto-nastaliq-urdu-arabic-700-normal.woff2)}
+:root{--t:#D97757;--c:#F59373;--r:#B85C3E;--ink:#1F1A17;--paper:#FFFDFB;--sand:#F7ECE5;--mute:#5E534D;--line:#EAD9CF}
+/* CR80 portrait: 54 x 85.6 mm + 2 mm bleed = 58 x 89.6 mm. Safe area 5 mm from sheet edge. Slot punch: top centre, keep 12 mm clear. */
+@page{size:58mm 89.6mm;margin:0}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Poppins,sans-serif;color:var(--ink);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.card{width:58mm;height:89.6mm;position:relative;overflow:hidden;page-break-after:always}
+.ur{font-family:Nastaliq,serif;direction:rtl;unicode-bidi:isolate}
+/* FRONT */
+.front{background:var(--paper)}
+.front .top{position:absolute;left:0;right:0;top:0;height:34mm;background:var(--t);overflow:hidden}
+.front .top .d{position:absolute;right:-10mm;top:-12mm;width:34mm;height:34mm;border-radius:8mm;background:var(--c);opacity:.55}
+.slot{position:absolute;left:50%;top:5mm;transform:translateX(-50%);width:13mm;height:3mm;border-radius:1.5mm;border:.25mm dashed rgba(255,255,255,.8)}
+.front .logo{position:absolute;left:50%;top:11.5mm;transform:translateX(-50%);height:5.6mm;background:#fff;border-radius:1.4mm;padding:1mm 1.8mm;box-sizing:content-box}
+.photo{position:absolute;left:50%;top:22mm;transform:translateX(-50%);width:26mm;height:31mm;border-radius:3mm;background:#EDE6E1;border:1mm solid #fff;box-shadow:0 .8mm 2.4mm rgba(31,26,23,.18);overflow:hidden}
+.photo img{width:100%;height:100%;object-fit:cover;display:block}
+.photo svg{width:100%;height:100%}
+.who{position:absolute;left:5mm;right:5mm;top:56mm;text-align:center}
+.name{font-weight:800;font-size:10.5pt;line-height:1.1;letter-spacing:-.01em}
+.who .ur{font-size:7pt;line-height:1.9;color:var(--mute)}
+.role{display:inline-block;margin-top:1.2mm;background:var(--ink);color:#fff;font-weight:700;font-size:5.2pt;letter-spacing:.1em;white-space:nowrap;padding:.8mm 2.4mm;border-radius:2mm}
+.meta{position:absolute;left:5mm;right:5mm;bottom:5mm;display:flex;justify-content:space-between;border-top:.3mm solid var(--line);padding-top:1.6mm}
+.meta div{font-size:4.8pt;color:var(--mute);line-height:1.3}
+.meta b{display:block;font-size:6pt;color:var(--ink)}
+.meta div:last-child{text-align:right}
+/* BACK */
+.back{background:var(--ink);color:#fff}
+.back .slot{border-color:rgba(255,255,255,.5)}
+.back .h{position:absolute;left:5mm;right:5mm;top:12mm;text-align:center}
+.back .h b{display:block;font-weight:800;font-size:9pt;line-height:1.15}
+.back .h span{display:block;font-size:5.4pt;color:#E3D5CC;line-height:1.4;margin-top:1mm}
+.back .qr{position:absolute;left:50%;top:27mm;transform:translateX(-50%);width:27mm;background:#fff;border-radius:2mm;padding:1.8mm;text-align:center}
+.back .qr img{width:23.4mm;height:23.4mm;display:block}
+.back .qr span{display:block;font-weight:700;font-size:4.4pt;letter-spacing:.1em;color:var(--r);margin-top:.8mm}
+.back .ver{position:absolute;left:5mm;right:5mm;top:62.5mm;text-align:center}
+.back .ver .ph{font-weight:700;font-size:7.4pt;color:var(--c)}
+.back .ver .ur{font-size:6.4pt;line-height:1.9;color:#E3D5CC}
+.back .prop{position:absolute;left:5mm;right:5mm;bottom:5mm;text-align:center;font-size:4.4pt;color:#BFAFA5;line-height:1.45;border-top:.3mm solid #3D332D;padding-top:1.4mm}
+</style></head>
+<body>
+
+<div class="card front">
+  <div class="top"><div class="d"></div><img class="logo" src="LOGO" alt="Solvexo"></div>
+  <div class="photo">{{PHOTO}}</div>
+  <div class="who">
+    <p class="name">{{NAME}}</p>
+    {{NAME_UR_LINE}}
+    <span class="role">AUTHORISED REPRESENTATIVE</span>
+  </div>
+  <div class="meta">
+    <div>ID no.<b>{{ID_NO}}</b></div>
+    <div>Valid until<b>{{VALID}}</b></div>
+  </div>
+</div>
+
+<div class="card back">
+  <div class="h"><b>Verify this representative</b><span>Scan to WhatsApp the Solvexo office with this ID number, or call the number below.</span></div>
+  <div class="qr"><img src="{{QR_FILE}}" alt="QR code to verify ID {{ID_NO}}"><span>SCAN TO VERIFY</span></div>
+  <div class="ver">
+    <p class="ph">{{OFFICE_PHONE}}</p>
+    <p class="ur">تصدیق کے لیے اس نمبر پر رابطہ کریں</p>
+  </div>
+  <p class="prop">This card is the property of {{COMPANY}}.<br>If found, please return to: {{OFFICE_ADDRESS}}</p>
+</div>
+
+</body></html>
