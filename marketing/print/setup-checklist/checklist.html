@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Solvexo Seller Setup Checklist</title>
+<style>
+@font-face{font-family:Poppins;font-weight:400;src:url(../tent-card/fonts/poppins-latin-400-normal.woff2)}
+@font-face{font-family:Poppins;font-weight:600;src:url(../tent-card/fonts/poppins-latin-600-normal.woff2)}
+@font-face{font-family:Poppins;font-weight:700;src:url(../tent-card/fonts/poppins-latin-700-normal.woff2)}
+@font-face{font-family:Poppins;font-weight:800;src:url(../tent-card/fonts/poppins-latin-800-normal.woff2)}
+@font-face{font-family:Nastaliq;font-weight:400;src:url(../tent-card/fonts/noto-nastaliq-urdu-arabic-400-normal.woff2)}
+:root{--t:#D97757;--c:#F59373;--r:#B85C3E;--ink:#1F1A17;--sand:#F7ECE5;--mute:#5E534D;--line:#D9C9BF}
+/* A4 pad sheet 210 x 297 mm + 3 mm bleed = 216 x 303 mm. Glue edge at the top: keep 15 mm clear. */
+@page{size:216mm 303mm;margin:0}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Poppins,sans-serif;color:var(--ink);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.page{width:216mm;height:303mm;position:relative;overflow:hidden;background:#fff}
+.ur{font-family:Nastaliq,serif;direction:rtl;unicode-bidi:isolate}
+.wrap{position:absolute;left:13mm;right:13mm;top:17mm;bottom:10mm;display:flex;flex-direction:column}
+.hd{display:flex;align-items:center;justify-content:space-between;border-bottom:1mm solid var(--t);padding-bottom:2.6mm}
+.hd img{height:8mm}
+.hd .t{text-align:right}
+.hd h1{font-weight:800;font-size:16pt;line-height:1.05}
+.hd p{font-size:7pt;color:var(--mute);margin-top:1mm}
+.hd .u{font-size:9pt;line-height:1.8;color:var(--mute)}
+/* info fields */
+.info{display:grid;grid-template-columns:1fr 1fr;gap:2.2mm 6mm;margin-top:3.4mm}
+.f{display:flex;align-items:flex-end;gap:2mm;font-size:7.6pt;color:var(--mute);white-space:nowrap}
+.f i{flex:1;border-bottom:.3mm solid var(--line);height:4.6mm}
+.f.full{grid-column:1/3}
+.f b{color:var(--ink);font-weight:600}
+.opts{display:flex;gap:4mm;font-size:7.4pt;color:var(--ink)}
+.opts span{display:flex;align-items:center;gap:1.2mm}
+.bx{width:3.6mm;height:3.6mm;border:.4mm solid var(--ink);border-radius:.7mm;display:inline-block;flex:none}
+/* checklist */
+.sec{margin-top:2.8mm}
+.sec h2{display:flex;align-items:center;gap:2mm;font-weight:700;font-size:9pt;background:var(--sand);border-radius:1.6mm;padding:.8mm 2.4mm}
+.sec h2 .n{width:5mm;height:5mm;border-radius:1.4mm;background:var(--t);color:#fff;font-size:7pt;display:flex;align-items:center;justify-content:center}
+.sec h2 .u{margin-left:auto;font-weight:400;font-size:7.6pt;line-height:1.5;color:var(--mute)}
+.row{display:grid;grid-template-columns:6mm 1fr 15mm;align-items:center;gap:2mm;padding:1.05mm 2.4mm;border-bottom:.25mm solid #EFE5DF;font-size:7.8pt;line-height:1.35}
+.row small{color:var(--mute);font-size:6.6pt}
+.row .ini{border-bottom:.3mm solid var(--line);height:4mm}
+.colhd{display:grid;grid-template-columns:6mm 1fr 15mm;gap:2mm;padding:0 2.4mm;margin-top:3mm;font-size:6pt;color:var(--mute);letter-spacing:.06em}
+.colhd span:last-child{text-align:center}
+/* follow-ups + consent + signatures */
+.fu{display:grid;grid-template-columns:repeat(3,1fr);gap:3mm;margin-top:3.4mm}
+.fu>div{border:.3mm solid var(--line);border-radius:2mm;padding:2.2mm 2.6mm;font-size:7pt}
+.fu b{display:block;font-size:7.6pt;color:var(--r);margin-bottom:.8mm}
+.fu .f{margin-top:1.8mm;font-size:6.8pt}
+.consent{margin-top:3mm;display:flex;gap:2.4mm;align-items:flex-start;font-size:7.2pt;line-height:1.45;border-left:1mm solid var(--t);padding:1mm 0 1mm 2.6mm}
+.consent .u{font-size:8pt;line-height:1.7;color:var(--mute);display:block}
+.sig{display:grid;grid-template-columns:1fr 1fr;gap:8mm;margin-top:auto;padding-top:4mm}
+.sig .f{font-size:7.4pt}
+.foot{display:flex;justify-content:space-between;font-size:6pt;color:var(--mute);margin-top:3mm;border-top:.3mm solid var(--line);padding-top:1.6mm}
+.foot b{color:var(--t)}
+</style></head>
+<body>
+<div class="page"><div class="wrap">
+
+  <div class="hd">
+    <img src="logo.png" alt="Solvexo">
+    <div class="t"><h1>Seller Setup Checklist</h1><p>Tick each step together with the seller. Store is “live” only when sections 1–4 are done.</p><p class="u ur">ہر مرحلہ سیلر کے ساتھ مل کر مکمل کریں</p></div>
+  </div>
+
+  <div class="info">
+    <div class="f"><b>Shop / business name</b><i></i></div>
+    <div class="f"><b>Date</b><i></i></div>
+    <div class="f"><b>Owner name</b><i></i></div>
+    <div class="f"><b>WhatsApp</b><i></i></div>
+    <div class="f full"><b>Store link</b><i></i><span style="color:var(--ink);font-weight:600">.solvexo.store</span></div>
+    <div class="f"><b>Area / market</b><i></i></div>
+    <div class="f"><b>Rep name</b><i></i></div>
+    <div class="f full" style="gap:4mm"><b>Seller type</b><span class="opts"><span><u class="bx"></u>Shop with counter</span><span><u class="bx"></u>Instagram / WhatsApp seller</span><span><u class="bx"></u>Both</span><span><u class="bx"></u>Other</span></span></div>
+  </div>
+
+  <div class="colhd"><span></span><span>STEP</span><span>INITIALS</span></div>
+
+  <div class="sec" style="margin-top:1mm"><h2><span class="n">1</span>Account<span class="u ur">اکاؤنٹ</span></h2>
+    <div class="row"><u class="bx"></u><span>Signed up with the seller’s <b>own email or Google</b> account (not the rep’s) <small>· email code confirmed</small></span><i class="ini"></i></div>
+    <div class="row"><u class="bx"></u><span>Seller knows their login and can sign in on their own phone</span><i class="ini"></i></div>
+    <div class="row"><u class="bx"></u><span>Plan chosen for the 7-day trial: <span class="opts" style="display:inline-flex;margin-left:2mm"><span><u class="bx"></u>Basic</span><span><u class="bx"></u>Grow</span><span><u class="bx"></u>Advanced</span></span></span><i class="ini"></i></div>
+  </div>
+
+  <div class="sec"><h2><span class="n">2</span>Store<span class="u ur">اسٹور</span></h2>
+    <div class="row"><u class="bx"></u><span>Store name and link set <small>· link written above</small></span><i class="ini"></i></div>
+    <div class="row"><u class="bx"></u><span>Theme chosen; logo or shop photo added (optional)</span><i class="ini"></i></div>
+  </div>
+
+  <div class="sec"><h2><span class="n">3</span>Payments<span class="u ur">پیمنٹ</span></h2>
+    <div class="row"><u class="bx"></u><span>Payment method turned on: <span class="opts" style="display:inline-flex;margin-left:2mm"><span><u class="bx"></u>Cash on delivery</span><span><u class="bx"></u>Bank transfer</span><span><u class="bx"></u>Card</span></span></span><i class="ini"></i></div>
+    <div class="row"><u class="bx"></u><span>Store shows as <b>live</b> <small>· opened the store link on the seller’s phone</small></span><i class="ini"></i></div>
+  </div>
+
+  <div class="sec"><h2><span class="n">4</span>Products<span class="u ur">پروڈکٹس</span></h2>
+    <div class="row"><u class="bx"></u><span><b>At least 5 real products</b> added, each with photo, price and correct stock <small>· count: ____</small></span><i class="ini"></i></div>
+    <div class="row"><u class="bx"></u><span>Sizes / colours added as variants where needed</span><i class="ini"></i></div>
+  </div>
+
+  <div class="sec"><h2><span class="n">5</span>POS &amp; staff<span class="u ur">POS اور اسٹاف</span></h2>
+    <div class="row"><u class="bx"></u><span><b>Test sale</b> done on POS; seller saw the stock drop online</span><i class="ini"></i></div>
+    <div class="row"><u class="bx"></u><span>Staff PINs set up for anyone who uses the till <small>· number of staff: ____</small></span><i class="ini"></i></div>
+    <div class="row"><u class="bx"></u><span>POS cheat sheet left at the till</span><i class="ini"></i></div>
+  </div>
+
+  <div class="sec"><h2><span class="n">6</span>Share &amp; handover<span class="u ur">لنک شیئر اور حوالگی</span></h2>
+    <div class="row"><u class="bx"></u><span>Store link added to <span class="opts" style="display:inline-flex;margin-left:2mm"><span><u class="bx"></u>Instagram / Facebook bio</span><span><u class="bx"></u>WhatsApp status</span></span></span><i class="ini"></i></div>
+    <div class="row"><u class="bx"></u><span>Counter QR tent card / window decal ordered or placed</span><i class="ini"></i></div>
+    <div class="row"><u class="bx"></u><span>Quick-start guide given; rep’s WhatsApp saved in seller’s phone</span><i class="ini"></i></div>
+    <div class="row"><u class="bx"></u><span>Seller told: trial ends in 7 days; then choose a plan; can change or cancel any time</span><i class="ini"></i></div>
+  </div>
+
+  <div class="fu">
+    <div><b>Day 3 check-in</b>Questions? More products?<div class="f">Date<i></i></div></div>
+    <div><b>Day 7 check-in</b>First order yet? Plan chosen?<div class="f">Date<i></i></div></div>
+    <div><b>Rep: after the visit</b><span class="opts" style="margin-top:1mm"><span><u class="bx"></u>Pipeline tracker updated</span></span><div class="f">Store live date<i></i></div></div>
+  </div>
+
+  <div class="consent"><u class="bx" style="margin-top:.4mm"></u><span>I agree that Solvexo and my rep may contact me on WhatsApp about setting up and running my store.<span class="u ur">میں راضی ہوں کہ Solvexo میرے اسٹور کے بارے میں واٹس ایپ پر رابطہ کرے۔</span></span></div>
+
+  <div class="sig">
+    <div class="f"><b>Seller signature</b><i></i></div>
+    <div class="f"><b>Rep signature</b><i></i></div>
+  </div>
+  <div class="foot"><span><b>Solvexo</b> · Seller setup checklist · v1 Nov 2026</span><span>Keep with the rep · enter in the pipeline tracker the same day</span></div>
+
+</div></div>
+</body></html>
