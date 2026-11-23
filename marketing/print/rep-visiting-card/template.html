@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Solvexo Rep Visiting Card</title>
+<style>
+@font-face{font-family:Poppins;font-weight:400;src:url(FONTS/poppins-latin-400-normal.woff2)}
+@font-face{font-family:Poppins;font-weight:600;src:url(FONTS/poppins-latin-600-normal.woff2)}
+@font-face{font-family:Poppins;font-weight:700;src:url(FONTS/poppins-latin-700-normal.woff2)}
+@font-face{font-family:Poppins;font-weight:800;src:url(FONTS/poppins-latin-800-normal.woff2)}
+@font-face{font-family:Nastaliq;font-weight:700;src:url(FONTS/noto-nastaliq-urdu-arabic-700-normal.woff2)}
+:root{--t:#D97757;--c:#F59373;--r:#B85C3E;--ink:#1F1A17;--paper:#FFFDFB;--sand:#F7ECE5;--mute:#5E534D;--line:#EAD9CF}
+/* 3.5 x 2 in (88.9 x 50.8 mm) + 3 mm bleed = 94.9 x 56.8 mm. Safe area 7 mm from sheet edge. */
+@page{size:94.9mm 56.8mm;margin:0}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Poppins,sans-serif;color:var(--ink);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.card{width:94.9mm;height:56.8mm;position:relative;overflow:hidden;page-break-after:always}
+/* FRONT: the person */
+.front{background:var(--paper)}
+.front .rail{position:absolute;left:0;top:0;bottom:0;width:8.5mm;background:var(--t)}
+.front .rail i{position:absolute;left:3mm;top:7mm;width:2.4mm;height:2.4mm;border-radius:.6mm;background:var(--c)}
+.front .logo{position:absolute;right:7mm;top:6.8mm;height:5mm}
+.front .who{position:absolute;left:14mm;top:13.5mm;right:7mm}
+.front .name{font-weight:800;font-size:12.5pt;line-height:1.1;letter-spacing:-.01em}
+.front .ur{font-family:Nastaliq,serif;direction:rtl;unicode-bidi:isolate;font-size:7.6pt;line-height:1.9;text-align:left;color:var(--mute);margin-top:.2mm}
+.front .title{font-weight:600;font-size:6.2pt;letter-spacing:.12em;color:var(--r);margin-top:.8mm}
+.front .contact{position:absolute;left:14mm;right:7mm;bottom:7mm;display:flex;flex-direction:column;gap:1.3mm}
+.front .ln{display:flex;align-items:center;gap:1.8mm;font-size:6.6pt;font-weight:600}
+.front .ln i{width:4mm;height:4mm;border-radius:1.1mm;background:var(--sand);display:flex;align-items:center;justify-content:center;flex:none}
+.front .ln span small{font-weight:400;color:var(--mute);font-size:5.6pt;margin-left:1mm}
+/* BACK: the brand */
+.back{background:var(--t)}
+.back .d1{position:absolute;right:-12mm;top:-14mm;width:42mm;height:42mm;border-radius:9mm;background:var(--c);opacity:.6}
+.back .d2{position:absolute;left:-8mm;bottom:-10mm;width:24mm;height:24mm;border-radius:6mm;background:var(--r);opacity:.35}
+.back .logo{position:absolute;left:7mm;top:8mm;height:6.4mm;background:#fff;border-radius:1.6mm;padding:1mm 1.8mm;box-sizing:content-box}
+.back .tag{position:absolute;left:7mm;top:20.5mm;width:46mm;font-weight:800;font-size:10pt;line-height:1.1;color:#fff}
+.back .tag span{color:var(--ink)}
+.back .site{position:absolute;left:7mm;bottom:7mm;font-weight:700;font-size:7pt;color:var(--ink)}
+.back .qr{position:absolute;right:7mm;bottom:7mm;width:24mm;background:#fff;border-radius:2mm;padding:1.6mm;text-align:center}
+.back .qr img{width:20.8mm;height:20.8mm;display:block}
+.back .qr span{display:block;font-weight:700;font-size:4.4pt;letter-spacing:.1em;margin-top:.8mm;color:var(--r)}
+svg{display:block}
+</style></head>
+<body>
+
+<div class="card front">
+  <div class="rail"><i></i></div>
+  <img class="logo" src="LOGO" alt="Solvexo">
+  <div class="who">
+    <p class="name">{{NAME}}</p>
+    {{NAME_UR_LINE}}
+    <p class="title">{{TITLE}}</p>
+  </div>
+  <div class="contact">
+    <div class="ln"><i><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#B85C3E" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20.5l1.6-5.4A8.4 8.4 0 1 1 21 11.5z"/></svg></i><span>{{PHONE}}<small>WhatsApp / Call</small></span></div>
+    {{EMAIL_LINE}}
+    <div class="ln"><i><svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="#B85C3E" stroke-width="2.6" stroke-linecap="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></i><span>solvexo.store</span></div>
+  </div>
+</div>
+
+<div class="card back">
+  <div class="d1"></div><div class="d2"></div>
+  <img class="logo" src="LOGO" alt="Solvexo">
+  <p class="tag">Your shop counter and online store. <span>One app.</span></p>
+  <p class="site">Create. Sell. Manage. Grow.</p>
+  <div class="qr"><img src="{{QR_FILE}}" alt="QR code: WhatsApp {{NAME}}"><span>WHATSAPP ME</span></div>
+</div>
+
+</body></html>

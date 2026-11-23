@@ -12,3 +12,6 @@ Thumbs.db
 
 # Generated download copies (rebuilt from the Markdown files)
 downloads/
+
+# Rep cards contain staff phone numbers
+marketing/print/rep-visiting-card/output/
