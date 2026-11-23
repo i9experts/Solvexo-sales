@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Solvexo Quick-start Guide</title>
+<style>
+@font-face{font-family:Poppins;font-weight:400;src:url(../tent-card/fonts/poppins-latin-400-normal.woff2)}
+@font-face{font-family:Poppins;font-weight:600;src:url(../tent-card/fonts/poppins-latin-600-normal.woff2)}
+@font-face{font-family:Poppins;font-weight:700;src:url(../tent-card/fonts/poppins-latin-700-normal.woff2)}
+@font-face{font-family:Poppins;font-weight:800;src:url(../tent-card/fonts/poppins-latin-800-normal.woff2)}
+@font-face{font-family:Nastaliq;font-weight:400;src:url(../tent-card/fonts/noto-nastaliq-urdu-arabic-400-normal.woff2)}
+@font-face{font-family:Nastaliq;font-weight:700;src:url(../tent-card/fonts/noto-nastaliq-urdu-arabic-700-normal.woff2)}
+:root{--t:#D97757;--c:#F59373;--r:#B85C3E;--ink:#1F1A17;--paper:#FFFDFB;--sand:#F7ECE5;--mute:#5E534D;--line:#EAD9CF}
+/* A5 portrait 148 x 210 mm + 3 mm bleed = 154 x 216 mm. 8 pages, saddle-stitched. Safe area 9 mm from sheet edge (12 mm on the spine side is fine too). */
+@page{size:154mm 216mm;margin:0}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Poppins,sans-serif;color:var(--ink);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+.page{width:154mm;height:216mm;position:relative;overflow:hidden;background:var(--paper);page-break-after:always}
+.ur{font-family:Nastaliq,serif;direction:rtl;unicode-bidi:isolate;text-align:right}
+.safe{position:absolute;left:12mm;right:12mm;top:12mm;bottom:12mm}
+.pn{position:absolute;bottom:7mm;font-size:6pt;color:var(--mute)}
+.pn.l{left:12mm}.pn.r{right:12mm}
+.pn b{color:var(--t)}
+/* step header */
+.step{display:flex;align-items:center;gap:3mm}
+.step .n{width:13mm;height:13mm;border-radius:3.4mm;background:var(--t);color:#fff;font-weight:800;font-size:18pt;display:flex;align-items:center;justify-content:center;flex:none}
+.step .k{font-weight:600;font-size:7pt;letter-spacing:.16em;color:var(--r)}
+.step h2{font-weight:800;font-size:19pt;line-height:1.05;letter-spacing:-.01em}
+.lead{font-size:9.2pt;color:var(--mute);line-height:1.5;margin-top:0}
+ol.do{list-style:none;counter-reset:d;margin-top:5mm;display:flex;flex-direction:column;gap:3.6mm}
+ol.do li{counter-increment:d;position:relative;padding-left:9mm;font-size:9.4pt;line-height:1.45}
+ol.do li::before{content:counter(d);position:absolute;left:0;top:.2mm;width:6mm;height:6mm;border-radius:50%;background:var(--sand);color:var(--r);font-weight:700;font-size:7.4pt;display:flex;align-items:center;justify-content:center}
+ol.do b{font-weight:700}
+.urbox{margin-top:6mm;background:var(--sand);border-right:1.2mm solid var(--t);border-radius:2.5mm 0 0 2.5mm;padding:1.6mm 4mm}
+.urbox p{font-size:10.2pt;line-height:2.05}
+.tip{margin-top:6mm;display:flex;gap:2.6mm;align-items:flex-start;border:.3mm dashed var(--c);border-radius:2.5mm;padding:3mm 3.4mm;font-size:8.4pt;line-height:1.45}
+.tip b{color:var(--r)}
+.tip i{width:5mm;height:5mm;border-radius:50%;background:var(--c);flex:none;display:flex;align-items:center;justify-content:center}
+.tip i::after{content:"!";font-style:normal;color:#fff;font-weight:800;font-size:7pt}
+/* phone illustration */
+.ill{position:absolute;right:11mm;width:50mm}
+.phone{width:50mm;height:100mm;background:var(--ink);border-radius:6mm;padding:2mm;box-shadow:0 2mm 6mm rgba(31,26,23,.2)}
+.scr{width:100%;height:100%;background:#fff;border-radius:4.4mm;overflow:hidden;position:relative;font-size:5.8pt}
+.scr .notch{position:absolute;left:50%;top:1.4mm;transform:translateX(-50%);width:11mm;height:2.4mm;background:var(--ink);border-radius:2mm}
+.scr .bar{padding:5.6mm 3mm 2mm;display:flex;align-items:center;gap:1.4mm;border-bottom:.25mm solid var(--line)}
+.scr .bar i{width:3.6mm;height:3.6mm;border-radius:.9mm;background:var(--t)}
+.scr .bar b{font-size:5.8pt}
+.scr .pad{padding:3mm 3.2mm;display:flex;flex-direction:column;gap:2.3mm}
+.fld{border:.25mm solid var(--line);border-radius:1.4mm;padding:1.4mm 1.8mm;color:var(--mute)}
+.fld small{display:block;font-size:4.4pt;color:#9A8C84}
+.btn{background:var(--t);color:#fff;border-radius:1.6mm;text-align:center;font-weight:700;padding:1.8mm}
+.btn.dark{background:var(--ink)}
+.btn.ghost{background:#fff;color:var(--ink);border:.25mm solid var(--line)}
+.h{font-weight:800;font-size:7.2pt}
+.mutetx{color:var(--mute);font-size:4.8pt;line-height:1.4}
+.otp{display:flex;gap:1mm}.otp span{flex:1;height:5mm;border:.3mm solid var(--line);border-radius:1mm;display:flex;align-items:center;justify-content:center;font-weight:700}
+.themes{display:grid;grid-template-columns:1fr 1fr;gap:1.4mm}.themes i{height:11mm;border-radius:1.2mm;border:.3mm solid var(--line)}
+.themes i.on{border:.6mm solid var(--t)}
+.toggle{display:flex;justify-content:space-between;align-items:center;border:.25mm solid var(--line);border-radius:1.4mm;padding:1.6mm 1.8mm}
+.toggle u{width:6mm;height:3.2mm;border-radius:2mm;background:var(--t);position:relative;text-decoration:none}
+.toggle u::after{content:"";position:absolute;right:.4mm;top:.4mm;width:2.4mm;height:2.4mm;border-radius:50%;background:#fff}
+.toggle u.off{background:#D9CFC9}.toggle u.off::after{right:auto;left:.4mm}
+.live{background:#E7F3E4;color:#2F6B2A;border-radius:1.4mm;padding:1.4mm 1.8mm;font-weight:700;text-align:center}
+.img{height:16mm;border-radius:1.4mm;background:linear-gradient(135deg,#F7D9CB,#F59373);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:1.4mm}
+.cartline{display:flex;justify-content:space-between;border-bottom:.25mm dashed var(--line);padding:1mm 0}
+.illcap{font-size:5pt;color:var(--mute);text-align:center;margin-top:1.6mm}
+.left{position:absolute;left:12mm;width:72mm}
+/* cover & back */
+.cover{background:var(--ink);color:#fff}
+.cover .d1{position:absolute;right:-30mm;top:-26mm;width:110mm;height:110mm;border-radius:24mm;background:var(--t)}
+.cover .d2{position:absolute;right:22mm;top:66mm;width:22mm;height:22mm;border-radius:6mm;background:var(--c)}
+.cover .logo{position:absolute;left:12mm;top:14mm;background:#fff;border-radius:2.5mm;padding:1.8mm 3mm}
+.cover .logo img{height:8mm;display:block}
+.cover .k{position:absolute;left:12mm;top:98mm;font-weight:600;font-size:7pt;letter-spacing:.2em;color:var(--c)}
+.cover h1{position:absolute;left:12mm;top:103mm;width:120mm;font-weight:800;font-size:28pt;line-height:1.02;letter-spacing:-.02em}
+.cover h1 span{color:var(--c)}
+.cover .u{position:absolute;left:12mm;right:12mm;top:136mm;font-size:13pt;line-height:2;color:#F1E6DF}
+.cover .six{position:absolute;left:12mm;right:12mm;top:160mm;display:grid;grid-template-columns:repeat(3,1fr);gap:2mm}
+.cover .six div{background:#2B2420;border-radius:2mm;padding:2mm 2.4mm;font-size:6.4pt;display:flex;gap:1.6mm;align-items:center}
+.cover .six b{color:var(--c);font-weight:800;font-size:8pt}
+.cover .foot{position:absolute;left:12mm;right:12mm;bottom:11mm;display:flex;justify-content:space-between;align-items:flex-end}
+.cover .foot p{font-size:6.6pt;color:#D9C9BF;line-height:1.5}
+.cover .foot p b{color:#fff}
+.cover .qr{background:#fff;border-radius:2mm;padding:1.6mm;text-align:center}
+.cover .qr img{width:19mm;height:19mm;display:block}
+.cover .qr span{display:block;font-weight:700;font-size:4.6pt;letter-spacing:.1em;color:var(--r);margin-top:.6mm}
+.check{display:flex;flex-direction:column;gap:3mm;margin-top:6mm}
+.check>div{display:flex;gap:3mm;align-items:flex-start;font-size:9.4pt;line-height:1.45;background:#fff;border:.3mm solid var(--line);border-radius:2.5mm;padding:3.2mm 3.6mm}
+.check u{width:4.4mm;height:4.4mm;border:.45mm solid var(--t);border-radius:1mm;flex:none;margin-top:.4mm}
+.check small{display:block;color:var(--mute);font-size:7.8pt;margin-top:.4mm}
+.end{margin-top:7mm;background:var(--ink);color:#fff;border-radius:3mm;padding:3.4mm 4mm}
+.end b{color:var(--c)}
+.end p{font-size:9pt;line-height:1.5}
+.helpgrid{display:grid;grid-template-columns:1fr 1fr;gap:4mm;margin-top:7mm}
+.hc{border:.3mm solid var(--line);border-radius:3mm;padding:4mm;background:#fff}
+.hc h4{font-size:9.4pt;font-weight:700;margin-bottom:1.4mm}
+.hc p{font-size:8.2pt;line-height:1.45;color:var(--mute)}
+.hc .l{display:flex;gap:2mm;align-items:flex-end;font-size:8pt;color:var(--mute);margin-top:5mm}
+.hc .l i{flex:1;border-bottom:.3mm solid #B9A69D;height:3mm}
+.hc .q{display:flex;gap:3mm;align-items:center}
+.hc .q img{width:24mm;height:24mm}
+table.daily{width:100%;border-collapse:collapse;margin-top:5mm;font-size:8.4pt}
+table.daily td{padding:1.6mm 2mm;border-bottom:.3mm solid var(--line);vertical-align:top}
+table.daily td:first-child{font-weight:700;color:var(--r);width:22mm;white-space:nowrap}
+svg{display:block}
+</style></head>
+<body>
+
+<!-- ============ PAGE 1: COVER ============ -->
+<div class="page cover">
+  <div class="d1"></div><div class="d2"></div>
+  <div class="logo"><img src="logo.png" alt="Solvexo"></div>
+  <p class="k">QUICK-START GUIDE</p>
+  <h1>Your store,<br>live <span>today.</span></h1>
+  <p class="u ur">آج ہی اپنا اسٹور لائیو کریں — آسان 6 مرحلے</p>
+  <div class="six">
+    <div><b>1</b>Sign up</div><div><b>2</b>Set up your store</div><div><b>3</b>Turn on payments</div>
+    <div><b>4</b>Add products</div><div><b>5</b>Share your link</div><div><b>6</b>First POS sale</div>
+  </div>
+  <div class="foot">
+    <p><b>Keep this guide by your counter.</b><br>یہ گائیڈ کاؤنٹر کے پاس رکھیں<br>solvexo.store</p>
+    <div class="qr"><img src="qr-signup.svg" alt="QR to solvexo.store"><span>START HERE</span></div>
+  </div>
+</div>
+
+<!-- ============ PAGE 2: BEFORE YOU START ============ -->
+<div class="page">
+  <div class="safe">
+    <div class="step"><div class="n" style="background:var(--ink)">0</div><div><p class="k">BEFORE YOU START · 10 MINUTES</p><h2>Have these ready</h2></div></div>
+    <div class="check">
+      <div><u></u><div><b>A phone or laptop with internet</b><small>Any smartphone works. A laptop is easier for adding many products.</small></div></div>
+      <div><u></u><div><b>An email address or Google account</b><small>You’ll get a one-time code by email to confirm your account.</small></div></div>
+      <div><u></u><div><b>Your store name</b><small>It becomes your store link: yourname.solvexo.store</small></div></div>
+      <div><u></u><div><b>5 to 10 products to start</b><small>For each one: a clear photo, the price and how many you have in stock.</small></div></div>
+      <div><u></u><div><b>How you’ll take payments</b><small>For example cash on delivery, bank transfer, or card.</small></div></div>
+    </div>
+    <div class="urbox ur"><p><b>شروع کرنے سے پہلے:</b> فون یا لیپ ٹاپ، ای میل یا Google اکاؤنٹ، اسٹور کا نام، اور 5 سے 10 پروڈکٹس کی تصویر، قیمت اور اسٹاک تیار رکھیں۔</p></div>
+    <div class="end"><p><b>By the end of this guide</b> your online store is live, your products are on it, your link is shared, and you’ve made your first sale at the counter with POS. Both use <b>one stock count</b>.</p></div>
+  </div>
+  <p class="pn l"><b>Solvexo</b> · Quick-start guide</p><p class="pn r">2</p>
+</div>
+
+<!-- ============ PAGE 3: STEP 1 SIGN UP ============ -->
+<div class="page">
+  <div class="safe">
+    <div class="step"><div class="n">1</div><div><p class="k">STEP 1 · 2 MINUTES</p><h2>Sign up free</h2></div></div>
+  </div>
+  <div class="left" style="top:36mm">
+    <p class="lead">Every new store gets a <b>7-day free trial</b> with full access. No card needed to start.</p>
+    <ol class="do">
+      <li>Scan the QR on the cover, or go to <b>solvexo.store</b> and tap <b>Start Selling</b>.</li>
+      <li>Sign up with your <b>email</b> or <b>Google</b>.</li>
+      <li>Enter the <b>one-time code</b> sent to your email.</li>
+      <li>Choose a plan to try. You can change it later.</li>
+    </ol>
+    <div class="urbox ur"><p>solvexo.store پر جائیں یا QR اسکین کریں۔ ای میل یا Google سے اکاؤنٹ بنائیں، اور ای میل پر آنے والا کوڈ ڈال دیں۔</p></div>
+    <div class="tip"><i></i><p><b>Tip:</b> use an email you check often. Order and account messages go there.</p></div>
+  </div>
+  <div class="ill" style="top:36mm">
+    <div class="phone"><div class="scr"><div class="notch"></div>
+      <div class="bar"><i></i><b>Solvexo</b></div>
+      <div class="pad">
+        <p class="h">Create your account</p>
+        <div class="btn ghost">Continue with Google</div>
+        <p class="mutetx" style="text-align:center">or</p>
+        <div class="fld"><small>Email</small>you@email.com</div>
+        <div class="fld"><small>Password</small>••••••••</div>
+        <div class="btn">Start Selling</div>
+        <p class="h" style="margin-top:1.6mm">Enter your code</p>
+        <div class="otp"><span>4</span><span>8</span><span>2</span><span>9</span><span>1</span><span>6</span></div>
+        <p class="mutetx">7-day free trial · No card needed</p>
+      </div>
+    </div></div>
+    <p class="illcap">Illustration. Your screen may look a little different.</p>
+  </div>
+  <p class="pn l"><b>Solvexo</b> · Quick-start guide</p><p class="pn r">3</p>
+</div>
+
+<!-- ============ PAGE 4: STEP 2 + 3 ============ -->
+<div class="page">
+  <div class="safe">
+    <div class="step"><div class="n">2</div><div><p class="k">STEP 2 · 3 MINUTES</p><h2>Set up your store</h2></div></div>
+  </div>
+  <div class="left" style="top:36mm">
+    <ol class="do" style="margin-top:0">
+      <li>Follow the <b>setup steps</b> after you sign up.</li>
+      <li>Enter your <b>store name</b>. This creates your link, e.g. <b>yourname.solvexo.store</b>.</li>
+      <li>Pick a <b>theme</b>. Add your logo and colours whenever you like.</li>
+    </ol>
+    <div class="urbox ur"><p>اسٹور کا نام لکھیں اور تھیم چن لیں۔ لوگو اور رنگ بعد میں بھی بدل سکتے ہیں۔</p></div>
+    <div class="step" style="margin-top:8mm"><div class="n">3</div><div><p class="k">STEP 3 · 2 MINUTES</p><h2>Turn on payments</h2></div></div>
+    <ol class="do">
+      <li>Open <b>payment settings</b> and turn on how you’ll be paid, e.g. <b>cash on delivery</b> or <b>bank transfer</b> (0% commission on both).</li>
+      <li>Once a payment method is added, <b>your store is live straight away</b>. No approval queue.</li>
+    </ol>
+    <div class="urbox ur"><p>کیش آن ڈیلیوری یا بینک ٹرانسفر آن کریں۔ پیمنٹ کا طریقہ شامل ہوتے ہی اسٹور لائیو ہو جاتا ہے۔</p></div>
+  </div>
+  <div class="ill" style="top:36mm">
+    <div class="phone"><div class="scr"><div class="notch"></div>
+      <div class="bar"><i></i><b>Store setup</b></div>
+      <div class="pad">
+        <div class="fld"><small>Store name</small>Al-Noor Mobiles</div>
+        <p class="mutetx">Your link: <b>alnoor-mobiles.solvexo.store</b></p>
+        <p class="h">Choose a theme</p>
+        <div class="themes"><i class="on" style="background:linear-gradient(#F7ECE5,#fff)"></i><i style="background:linear-gradient(#EDE6E1,#fff)"></i></div>
+        <p class="h">Payments</p>
+        <div class="toggle"><span>Cash on delivery</span><u></u></div>
+        <div class="toggle"><span>Bank transfer</span><u></u></div>
+        <div class="toggle"><span>Card payments</span><u class="off"></u></div>
+        <div class="live">Your store is live</div>
+      </div>
+    </div></div>
+    <p class="illcap">Illustration. Your screen may look a little different.</p>
+  </div>
+  <p class="pn l"><b>Solvexo</b> · Quick-start guide</p><p class="pn r">4</p>
+</div>
+
+<!-- ============ PAGE 5: STEP 4 PRODUCTS ============ -->
+<div class="page">
+  <div class="safe">
+    <div class="step"><div class="n">4</div><div><p class="k">STEP 4 · 1 MINUTE PER PRODUCT</p><h2>Add your products</h2></div></div>
+  </div>
+  <div class="left" style="top:36mm">
+    <ol class="do" style="margin-top:0">
+      <li>Go to <b>Products</b> and tap <b>Add product</b>.</li>
+      <li>Add a <b>photo</b>, the <b>name</b> and the <b>price</b>.</li>
+      <li>Enter the <b>stock quantity</b>. This one number is used by both your online store and your POS.</li>
+      <li>Has sizes or colours? Add them as <b>variants</b>, each with its own stock.</li>
+      <li><b>Save</b>. The product appears in your store at once.</li>
+    </ol>
+    <div class="urbox ur"><p>ہر پروڈکٹ کی تصویر، نام، قیمت اور اسٹاک ڈالیں۔ کم از کم 5 پروڈکٹس سے شروع کریں۔</p></div>
+    <div class="tip"><i></i><p><b>Good photos sell.</b> Plain background, daylight, the whole product in frame, and 2 to 3 angles.</p></div>
+  </div>
+  <div class="ill" style="top:36mm">
+    <div class="phone"><div class="scr"><div class="notch"></div>
+      <div class="bar"><i></i><b>Add product</b></div>
+      <div class="pad">
+        <div class="img">+ Photo</div>
+        <div class="fld"><small>Product name</small>Wireless Earbuds</div>
+        <div class="grid2"><div class="fld"><small>Price (Rs)</small>4,200</div><div class="fld"><small>Stock</small>12</div></div>
+        <div class="fld"><small>Variants</small>Black · White</div>
+        <div class="btn">Save product</div>
+        <p class="mutetx">Sample product for illustration</p>
+      </div>
+    </div></div>
+    <p class="illcap">Illustration. Your screen may look a little different.</p>
+  </div>
+  <p class="pn l"><b>Solvexo</b> · Quick-start guide</p><p class="pn r">5</p>
+</div>
+
+<!-- ============ PAGE 6: STEP 5 SHARE ============ -->
+<div class="page">
+  <div class="safe">
+    <div class="step"><div class="n">5</div><div><p class="k">STEP 5 · 5 MINUTES</p><h2>Share your store link</h2></div></div>
+  </div>
+  <div class="left" style="top:36mm">
+    <p class="lead">Your link looks like <b>yourname.solvexo.store</b>. Put it everywhere your customers already are:</p>
+    <ol class="do">
+      <li><b>Instagram / Facebook bio:</b> paste the link so followers can order themselves.</li>
+      <li><b>WhatsApp status</b> and your WhatsApp Business profile.</li>
+      <li><b>At the counter:</b> your Solvexo team can give you a QR stand card for customers to scan.</li>
+      <li><b>On every bag or parcel:</b> “Reorder online: yourname.solvexo.store”.</li>
+    </ol>
+    <div class="urbox ur"><p>اپنا اسٹور لنک انسٹاگرام بائیو، واٹس ایپ اسٹیٹس اور کاؤنٹر پر لگائیں، تاکہ کسٹمر خود آرڈر کر سکیں۔</p></div>
+    <div class="tip"><i></i><p><b>Message existing customers once</b> (only those who chat with you already): “We’re online now! Order any time: [your link]”.</p></div>
+  </div>
+  <div class="ill" style="top:36mm">
+    <div class="phone"><div class="scr"><div class="notch"></div>
+      <div class="bar"><i></i><b>Al-Noor Mobiles</b></div>
+      <div class="pad">
+        <p class="mutetx">alnoor-mobiles.solvexo.store</p>
+        <div class="img" style="height:12mm">New arrivals</div>
+        <div class="grid2">
+          <div class="fld" style="padding:1mm"><div class="img" style="height:9mm"></div>Earbuds<br><b>Rs 4,200</b></div>
+          <div class="fld" style="padding:1mm"><div class="img" style="height:9mm;background:linear-gradient(135deg,#EDE3DC,#C9B3A9)"></div>Case<br><b>Rs 450</b></div>
+        </div>
+        <div class="btn dark">Share store link</div>
+      </div>
+    </div></div>
+    <p class="illcap">Illustration with sample products.</p>
+  </div>
+  <p class="pn l"><b>Solvexo</b> · Quick-start guide</p><p class="pn r">6</p>
+</div>
+
+<!-- ============ PAGE 7: STEP 6 POS ============ -->
+<div class="page">
+  <div class="safe">
+    <div class="step"><div class="n">6</div><div><p class="k">STEP 6 · 1 MINUTE</p><h2>Your first sale at the counter</h2></div></div>
+  </div>
+  <div class="left" style="top:36mm">
+    <ol class="do" style="margin-top:0">
+      <li>Open <b>POS</b> and log in with your <b>staff PIN</b>.</li>
+      <li><b>Search</b> the product and add it to the cart. Add a discount if needed.</li>
+      <li>Take <b>payment</b>: cash (change is worked out for you), card, or split.</li>
+      <li>Give the <b>receipt</b>. Stock drops by itself, online too.</li>
+    </ol>
+    <div class="urbox ur"><p>POS کھولیں، PIN سے لاگ اِن کریں، پروڈکٹ تلاش کریں، پیمنٹ لیں اور رسید دیں۔ اسٹاک خود ہی کم ہو جائے گا۔</p></div>
+    <table class="daily">
+      <tr><td>Every morning</td><td>Open POS and start your shift.</td></tr>
+      <tr><td>During the day</td><td>Ring up every sale. Check new online orders.</td></tr>
+      <tr><td>Every evening</td><td>End the shift and check the shift summary and cash.</td></tr>
+    </table>
+  </div>
+  <div class="ill" style="top:36mm">
+    <div class="phone"><div class="scr"><div class="notch"></div>
+      <div class="bar"><i></i><b>POS · Current sale</b></div>
+      <div class="pad">
+        <div class="fld">Search products…</div>
+        <div class="cartline"><span>1× Wireless Earbuds</span><b>Rs 4,200</b></div>
+        <div class="cartline"><span>2× Phone Case</span><b>Rs 900</b></div>
+        <div class="cartline"><span>Discount</span><b>− Rs 100</b></div>
+        <div class="cartline" style="border:none"><b>Total</b><b>Rs 5,000</b></div>
+        <div class="grid2"><div class="btn ghost">Cash</div><div class="btn ghost">Card</div></div>
+        <div class="btn">Payment received · Print receipt</div>
+        <div class="live">Stock updated online</div>
+      </div>
+    </div></div>
+    <p class="illcap">Illustration with sample items.</p>
+  </div>
+  <p class="pn l"><b>Solvexo</b> · Quick-start guide</p><p class="pn r">7</p>
+</div>
+
+<!-- ============ PAGE 8: HELP (BACK COVER) ============ -->
+<div class="page">
+  <div class="safe">
+    <div class="step"><div class="n" style="background:var(--ink)">?</div><div><p class="k">HELP &amp; NEXT STEPS</p><h2>We’re here to help</h2></div></div>
+    <div class="helpgrid">
+      <div class="hc"><h4>Your Solvexo contact</h4><p>WhatsApp them for help setting up.</p>
+        <div class="l"><span>Name</span><i></i></div><div class="l"><span>WhatsApp</span><i></i></div></div>
+      <div class="hc"><h4>Step-by-step manuals</h4><div class="q"><img src="qr-manuals.svg" alt="QR to manuals"><p>Full PDF manuals with real screenshots, in <b>English and Urdu</b>: solvexo.store/manuals</p></div></div>
+      <div class="hc"><h4>Email support</h4><p><b style="color:var(--ink)">sales@solvexo.store</b><br>We usually reply within 24 hours.</p></div>
+      <div class="hc"><h4>After your 7-day trial</h4><p>Choose a plan to keep selling. You can change or cancel your plan any time. Current prices: solvexo.store/pricing</p></div>
+    </div>
+    <div class="urbox ur" style="margin-top:5mm"><p>مدد چاہیے؟ اپنے Solvexo نمائندے کو واٹس ایپ کریں، یا solvexo.store/manuals پر اردو گائیڈ دیکھیں۔</p></div>
+    <div class="end" style="margin-top:6mm"><p><b>Your first week:</b> add all your products · share your link every day · ring up every counter sale on POS · check your sales report on day 7.</p></div>
+  </div>
+  <div style="position:absolute;left:12mm;right:12mm;bottom:11mm;display:flex;justify-content:space-between;align-items:center">
+    <img src="logo.png" alt="Solvexo" style="height:7mm">
+    <p style="font-size:6.4pt;color:var(--mute)">Create. Sell. Manage. Grow. · Powered by i9 Experts</p>
+  </div>
+</div>
+
+</body></html>
